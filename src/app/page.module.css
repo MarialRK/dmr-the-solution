@@ -49,18 +49,6 @@
 .groups span { color: var(--graphite); font-size: 1rem; }
 
 .ventures { padding: 130px var(--gutter); }
-.holding { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: center; margin-top: 56px; padding-bottom: 56px; border-bottom: 1px solid var(--silver); }
-.holdingLogo img { display: block; width: min(100%, 380px); height: auto; mix-blend-mode: multiply; }
-.holding h3 { font-size: clamp(2rem, 3vw, 2.9rem); line-height: 1.1; }
-.holding p { margin: 0; max-width: 34em; }
-.holding .status { margin-top: 6px !important; margin-bottom: 14px !important; }
-.ventureList { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(32px, 5vw, 80px); margin-top: 56px; }
-.ventureLogo { height: 120px; display: flex; align-items: center; margin-bottom: 26px; }
-.ventureLogo img { max-height: 120px; width: auto; max-width: 200px; mix-blend-mode: multiply; }
-.ventureList h3 { font-size: 1.75rem; line-height: 1.15; }
-.ventureList p { margin: 0; max-width: 30em; }
-.ventureList .status { margin-top: 6px !important; margin-bottom: 14px !important; }
-.separate { margin: 52px 0 0; color: var(--graphite); font-size: 1rem; }
 
 .insights { background: var(--mist); padding: 100px var(--gutter); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: start; }
 .insights p { margin: 8px 0 0; max-width: 34em; }
@@ -78,7 +66,7 @@
   .actions { gap: 10px; margin-top: 26px; }
   .statement { margin-top: 22px; }
   .portrait { justify-self: center; max-width: 440px; padding-bottom: 20px; }
-  .practice, .work li, .groups, .ventureList, .insights, .holding { grid-template-columns: 1fr; }
+  .practice, .work li, .groups, .insights { grid-template-columns: 1fr; }
   .practiceImages img:last-child { margin-top: 40px; }
   .work, .services, .ventures { padding-block: 84px; }
   .practice { padding-bottom: 84px; }

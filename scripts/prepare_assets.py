@@ -44,3 +44,5 @@ jpg('at-work-monochrome.png','at-work.jpg')
 jpg('flags-hall.png','flags-hall.jpg')
 for n,o in [('nile-green-group','nile-green-group'),('nile-green-packaging','nile-green-packaging'),('nile-vertex-properties','nile-vertex-properties')]:
     Image.open(f'{src}logos/{n}.jpg').convert('RGB').save(f'public/logos/{o}.jpg',quality=90)
+jpg('certificate-alu.png','alu-portrait.jpg')
+jpg('portrait-studio-close.png','portrait-close.jpg')

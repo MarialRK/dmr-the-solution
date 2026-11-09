@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { holdingCompany, selectedWork, serviceGroups, site, ventures } from '@/content/site'
+import { Ventures } from '@/components/Ventures'
+import { selectedWork, serviceGroups, site } from '@/content/site'
 import styles from './page.module.css'
 
 export default function HomePage() {
@@ -111,29 +112,7 @@ export default function HomePage() {
 
       <section className={styles.ventures}>
         <h2>Companies I have founded</h2>
-        <article className={styles.holding}>
-          <div className={styles.holdingLogo}>
-            <Image src={holdingCompany.logo} alt={`${holdingCompany.name} logo`} width={holdingCompany.width} height={holdingCompany.height} sizes="360px" />
-          </div>
-          <div>
-            <h3>{holdingCompany.name}</h3>
-            <p className={styles.status}>{holdingCompany.role}</p>
-            <p>{holdingCompany.summary}</p>
-          </div>
-        </article>
-        <div className={styles.ventureList}>
-          {ventures.map((venture) => (
-            <article key={venture.name}>
-              <div className={styles.ventureLogo}>
-                <Image src={venture.logo} alt={`${venture.name} logo`} width={venture.width} height={venture.height} sizes="200px" />
-              </div>
-              <h3>{venture.name}</h3>
-              <p className={styles.status}>{venture.role}</p>
-              <p>{venture.summary}</p>
-            </article>
-          ))}
-        </div>
-        <p className={styles.separate}>These are separate businesses. They are not part of DMR’s services.</p>
+        <Ventures />
       </section>
 
       <section className={styles.insights}>
