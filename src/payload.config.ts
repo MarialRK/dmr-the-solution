@@ -17,7 +17,7 @@ import { migrations } from './migrations'
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default buildConfig({
-  admin: { user: Users.slug, meta: { titleSuffix: ' | DMR dashboard' }, importMap: { baseDir: dirname } },
+  admin: { user: Users.slug, avatar: 'default', meta: { titleSuffix: ' | DMR dashboard' }, importMap: { baseDir: dirname } },
   collections: [Enquiries, Articles, Appearances, PortfolioItems, Uploads, Users],
   globals: [SiteSettings],
   editor: lexicalEditor(),
