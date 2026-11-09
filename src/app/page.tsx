@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { selectedWork, serviceGroups, site, ventures } from '@/content/site'
+import { holdingCompany, selectedWork, serviceGroups, site, ventures } from '@/content/site'
 import styles from './page.module.css'
 
 export default function HomePage() {
@@ -17,7 +17,6 @@ export default function HomePage() {
             I started a packaging company in Juba and built a flood-risk system for the Sudd. Now I help
             people and organisations turn their own ideas into work that gets finished.
           </p>
-          <p className={styles.tagline}>{site.tagline}</p>
           <div className={styles.actions}>
             <Link className={styles.primary} href="/work">
               See my work
@@ -30,7 +29,7 @@ export default function HomePage() {
         <div className={styles.portrait}>
           <Image
             src="/images/portrait-hero.jpg"
-            alt="Daniel Marial Reng Kudum in a dark suit and tie"
+            alt="Daniel Marial Reng Kudum in a navy suit and red tie"
             width={774}
             height={1080}
             priority
@@ -43,13 +42,20 @@ export default function HomePage() {
       </section>
 
       <section className={styles.practice}>
-        <div className={styles.practiceImage}>
+        <div className={styles.practiceImages}>
+          <Image
+            src="/images/flags-hall.jpg"
+            alt="Daniel standing beside the flag of South Sudan in a hall of national flags"
+            width={720}
+            height={1280}
+            sizes="(max-width: 800px) 46vw, 25vw"
+          />
           <Image
             src="/images/at-work.jpg"
             alt="Daniel working on a laptop at a curved wooden desk"
             width={592}
             height={1080}
-            sizes="(max-width: 800px) 100vw, 34vw"
+            sizes="(max-width: 800px) 46vw, 25vw"
           />
         </div>
         <div className={styles.practiceText}>
@@ -105,6 +111,16 @@ export default function HomePage() {
 
       <section className={styles.ventures}>
         <h2>Companies I have founded</h2>
+        <article className={styles.holding}>
+          <div className={styles.holdingLogo}>
+            <Image src={holdingCompany.logo} alt={`${holdingCompany.name} logo`} width={holdingCompany.width} height={holdingCompany.height} sizes="360px" />
+          </div>
+          <div>
+            <h3>{holdingCompany.name}</h3>
+            <p className={styles.status}>{holdingCompany.role}</p>
+            <p>{holdingCompany.summary}</p>
+          </div>
+        </article>
         <div className={styles.ventureList}>
           {ventures.map((venture) => (
             <article key={venture.name}>

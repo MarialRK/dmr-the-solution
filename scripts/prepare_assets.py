@@ -30,12 +30,17 @@ from scipy import ndimage as ni
 g=ImageOps.grayscale(Image.open(src+'photos/portrait-studio.png').convert('RGB'))
 arr=np.array(g); candidate=ni.binary_opening((arr>135)&(arr<225),iterations=3); lab,_=ni.label(candidate)
 edge=set(lab[0,:])|set(lab[:,0])|set(lab[:,-1]); edge.discard(0)
+# gaps between the arms and body are background too; the shirt sits in the centre band
+W=arr.shape[1]; centre=set(np.unique(lab[:,int(W*.40):int(W*.62)]))
+sizes=ni.sum(lab>0,lab,range(1,lab.max()+1))
+edge|={i+1 for i,n in enumerate(sizes) if n>60 and i+1 not in centre}
 bg=np.isin(lab,list(edge))
 bg=ni.binary_dilation(bg,iterations=4,mask=(arr>120)&(arr<228))
 alpha=Image.fromarray((~bg*255).astype('uint8')).filter(ImageFilter.GaussianBlur(0.9))
 base=Image.new('RGB',g.size,(191,192,194))
-base.paste(g.convert('RGB'),mask=alpha); base.save('public/images/portrait-hero.jpg',quality=90,optimize=True)
+base.paste(Image.open(src+'photos/portrait-studio.png').convert('RGB'),mask=alpha); base.save('public/images/portrait-hero.jpg',quality=90,optimize=True)
 print('bg share',bg.mean())
 jpg('at-work-monochrome.png','at-work.jpg')
+jpg('flags-hall.png','flags-hall.jpg')
 for n,o in [('nile-green-group','nile-green-group'),('nile-green-packaging','nile-green-packaging'),('nile-vertex-properties','nile-vertex-properties')]:
     Image.open(f'{src}logos/{n}.jpg').convert('RGB').save(f'public/logos/{o}.jpg',quality=90)

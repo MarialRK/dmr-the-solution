@@ -70,21 +70,22 @@ export const serviceGroups = [
   },
 ]
 
+export const holdingCompany = {
+  name: 'Nile Green Group',
+  logo: '/logos/nile-green-group.jpg',
+  width: 1080,
+  height: 590,
+  role: 'Founder',
+  summary: 'The Kigali-based holding company that owns and invests in the businesses below.',
+}
+
 export const ventures = [
-  {
-    name: 'Nile Green Group',
-    logo: '/logos/nile-green-group.jpg',
-    width: 1080,
-    height: 590,
-    role: 'Founder',
-    summary: 'A Kigali-based investment holding group.',
-  },
   {
     name: 'Nile Green Packaging',
     logo: '/logos/nile-green-packaging.jpg',
     width: 1024,
     height: 1024,
-    role: 'Founder',
+    role: 'Founder. Part of Nile Green Group.',
     summary:
       'Biodegradable paper packaging from Juba, South Sudan, moving from pilot production to automated manufacturing. Winner of ALU Ventures Lab Demo Day 2025, with a US$30,000 prize.',
   },
@@ -93,7 +94,7 @@ export const ventures = [
     logo: '/logos/nile-vertex-properties.jpg',
     width: 906,
     height: 1080,
-    role: 'Part of Nile Green Group',
+    role: 'Part of Nile Green Group.',
     summary: 'Property rentals, sales and investment in Kigali.',
   },
 ]

@@ -8,7 +8,6 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={styles.brand}>
         <Image src="/logos/dmr-logo-white.svg" alt="DMR The Solution" width={3766} height={1112} />
-        <p>{site.tagline}</p>
       </div>
       <nav aria-label="Footer">
         {navigation.map((item) => (
