@@ -101,7 +101,11 @@ export default async function PortfolioPage() {
             <Item item={item} key={item.id} />
           ))}
 
-          {emptyLabels[category] && !inCategory(category).length ? <Placeholder label={emptyLabels[category]} /> : null}
+          {emptyLabels[category] && !inCategory(category).length ? (
+            <div className={s.singlePlaceholder}>
+              <Placeholder label={emptyLabels[category]} />
+            </div>
+          ) : null}
         </section>
       ))}
     </>
