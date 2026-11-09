@@ -21,7 +21,7 @@ export default async function ServicesPage() {
       <section className={`${s.section} ${s.first}`}>
         {groups.map((group) => (
           <div className={s.group} key={group}>
-            <p className={s.groupTitle}>{group}</p>
+            <h2 className={s.groupTitle}>{group}</h2>
             {services
               .filter((service) => service.group === group && !hiddenServices.includes(service.slug))
               .map((service) => (

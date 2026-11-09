@@ -22,7 +22,8 @@
 .secondary:hover { background: var(--black); color: var(--white); }
 .portrait { align-self: end; justify-self: end; position: relative; z-index: 1; width: 100%; max-width: 620px; }
 .portrait img { display: block; width: 100%; height: auto; }
-.line { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: clamp(80px, 12vw, 170px); z-index: 2; fill: var(--black); }
+@keyframes draw { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+.line { animation: draw 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both; position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: clamp(80px, 12vw, 170px); z-index: 2; fill: var(--black); }
 
 .practice { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: clamp(32px, 7vw, 120px); align-items: center; background: var(--black); color: var(--white); padding: 40px var(--gutter) 130px; }
 .practiceImages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }

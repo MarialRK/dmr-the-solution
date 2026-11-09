@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { PageIntro } from '@/components/PageIntro'
+import { Placeholder } from '@/components/Placeholder'
 import { formatDate, getAppearances, isSafeLink } from '@/lib/cms'
 import s from '@/components/Inner.module.css'
 
@@ -21,7 +22,7 @@ export default async function MediaPage() {
           return (
             <article className={s.entry} key={item.id}>
               <div>
-                <h3>{item.title}</h3>
+                <h2>{item.title}</h2>
                 <p className={s.status}>
                   {item.kind}, {formatDate(item.date)}
                 </p>
@@ -42,11 +43,25 @@ export default async function MediaPage() {
         })}
         <article className={s.entry}>
           <div>
-            <h3>ALU Ventures Lab Demo Day</h3>
+            <h2>ALU Ventures Lab Demo Day</h2>
             <p className={s.status}>Recognition, 2025</p>
           </div>
           <p>Nile Green Packaging was named winner, with a US$30,000 prize.</p>
         </article>
+        <article className={s.entry}>
+          <div>
+            <h2>At African Leadership University</h2>
+            <p className={s.status}>Event details to be added</p>
+          </div>
+          <Image className={s.entryImage} src="/images/alu-group.jpg" alt="Daniel holding a document folder with three others at African Leadership University" width={1280} height={850} sizes="(max-width: 800px) 100vw, 45vw" />
+        </article>
+        {appearances.length ? null : (
+          <div className={s.placeholders}>
+            <Placeholder label="Interviews to be added" />
+            <Placeholder label="Speaking engagements to be added" />
+            <Placeholder label="Conferences and events to be added" />
+          </div>
+        )}
         <p className={s.path}>For interviews, speaking or press enquiries, please get in touch.</p>
         <Link className={s.button} href="/contact">
           Contact me

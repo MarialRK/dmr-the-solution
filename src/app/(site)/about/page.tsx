@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { PageIntro } from '@/components/PageIntro'
+import { Placeholder } from '@/components/Placeholder'
 import s from '@/components/Inner.module.css'
 
 export const metadata: Metadata = {
@@ -47,6 +48,10 @@ export default function AboutPage() {
       </section>
       <section className={`${s.section} ${s.dark}`}>
         <p className={s.quote}>Lasting change comes less from grand declarations than from disciplined work.</p>
+      </section>
+      <section className={`${s.section} ${s.alt} ${s.split}`}>
+        <h2>Leadership, community and life outside work</h2>
+        <Placeholder label="More about my leadership, community work and interests to be added" />
       </section>
       <section className={`${s.section} ${s.split}`}>
         <div className={s.prose}>

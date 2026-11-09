@@ -14,6 +14,7 @@ export const navigation = [
   { label: 'About', href: '/about' },
   { label: 'Work', href: '/work' },
   { label: 'Services', href: '/services' },
+  { label: 'Portfolio', href: '/portfolio' },
   { label: 'Insights', href: '/insights' },
   { label: 'Media', href: '/media' },
   { label: 'Contact', href: '/contact' },

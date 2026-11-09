@@ -33,7 +33,9 @@ export default async function ContactPage() {
             <p className={s.path}>
               <a href={`mailto:${settings.publicEmail}`}>{settings.publicEmail}</a>
             </p>
-          ) : null}
+          ) : (
+            <p className={s.path}>Email address to be added.</p>
+          )}
           <div className={s.links}>
             {site.socials.map((social) => (
               <a key={social.label} href={social.href} rel="noopener noreferrer" target="_blank">

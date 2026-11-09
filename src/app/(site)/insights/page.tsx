@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageIntro } from '@/components/PageIntro'
+import { Placeholder } from '@/components/Placeholder'
 import { site } from '@/content/site'
 import { formatDate, getArticles } from '@/lib/cms'
 import s from '@/components/Inner.module.css'
@@ -19,7 +20,7 @@ export default async function InsightsPage() {
         {articles.length ? (
           articles.map((article) => (
             <Link className={s.serviceRow} href={`/insights/${article.slug}`} key={article.id}>
-              <h3>{article.title}</h3>
+              <h2>{article.title}</h2>
               <div>
                 <p>{article.summary}</p>
                 <p className={s.status}>{formatDate(article.publishedOn)}</p>
@@ -28,7 +29,12 @@ export default async function InsightsPage() {
           ))
         ) : (
           <>
-            <p className={s.path}>No articles have been published yet. Follow along on LinkedIn for updates.</p>
+            <div className={s.placeholders}>
+              <Placeholder label="Article to be published" />
+              <Placeholder label="Article to be published" />
+              <Placeholder label="Article to be published" />
+            </div>
+            <p className={s.path}>Follow along on LinkedIn for updates.</p>
             <a className={s.button} href={site.socials[0].href} rel="noopener noreferrer" target="_blank">
               Follow on LinkedIn
             </a>

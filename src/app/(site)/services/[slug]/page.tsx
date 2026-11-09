@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { PageIntro } from '@/components/PageIntro'
+import { Placeholder } from '@/components/Placeholder'
 import { services } from '@/content/services'
 import { getSettings } from '@/lib/cms'
 import s from '@/components/Inner.module.css'
@@ -87,16 +88,18 @@ export default async function ServicePage({ params }: Props) {
               </ul>
             </div>
           ) : null}
-          {service.examples ? (
-            <div className={s.block}>
-              <h2>Examples</h2>
+          <div className={s.block}>
+            <h2>Examples</h2>
+            {service.examples ? (
               <ul className={s.list}>
                 {service.examples.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-            </div>
-          ) : null}
+            ) : (
+              <Placeholder label="Examples of this work to be added" />
+            )}
+          </div>
         </div>
       </section>
     </>
