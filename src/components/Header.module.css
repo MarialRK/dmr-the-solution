@@ -1,0 +1,28 @@
+.header {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px var(--gutter);
+}
+.logo { display: block; width: 168px; }
+.logo img { display: block; width: 100%; height: auto; }
+.desktop { display: flex; gap: 36px; }
+.desktop a { color: var(--black); text-decoration: none; font-size: 1rem; padding: 6px 0; }
+.desktop a:hover { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+.mobile { display: none; position: relative; }
+.mobile summary { cursor: pointer; list-style: none; padding: 10px 0; font-size: 1rem; }
+.mobile summary::-webkit-details-marker { display: none; }
+.mobile nav {
+  position: absolute; right: 0; top: 100%; display: grid; min-width: 200px;
+  background: var(--black); padding: 14px 22px;
+}
+.mobile nav a { color: var(--white); text-decoration: none; padding: 10px 0; }
+@media (max-width: 800px) {
+  .header { padding-block: 18px; }
+  .logo { width: 132px; }
+  .desktop { display: none; }
+  .mobile { display: block; }
+}
