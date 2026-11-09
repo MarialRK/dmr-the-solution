@@ -33,6 +33,9 @@ export default function WorkPage() {
             <dd>Ten counties, January 2023 to December 2024, using historical satellite and flood records.</dd>
             <dt>Tools</dt>
             <dd>Python, XGBoost, SHAP, FastAPI, React and Leaflet.</dd>
+            <dd>
+              <Link href="/work/suddsight">Read the full case study</Link>
+            </dd>
           </dl>
         </article>
         <article className={s.entry}>

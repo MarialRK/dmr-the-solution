@@ -49,6 +49,17 @@ export default function AboutPage() {
       <section className={`${s.section} ${s.dark}`}>
         <p className={s.quote}>Lasting change comes less from grand declarations than from disciplined work.</p>
       </section>
+      <section className={`${s.section} ${s.split}`}>
+        <h2>Milestones</h2>
+        <ol className={s.timeline}>
+          <li><span>2023</span><p>Began studying software engineering at African Leadership University as a Mastercard Foundation Scholar.</p></li>
+          <li><span>2024</span><p>Named a Millennium Fellow, and began a year as a Software Engineering Intern at Trinity Technologies.</p></li>
+          <li><span>January 2025</span><p>Founded Nile Green Packaging in Juba.</p></li>
+          <li><span>2025</span><p>Won ALU Ventures Lab Demo Day with Nile Green Packaging.</p></li>
+          <li><span>June 2026</span><p>Completed the Carbon and ESG Analysis programme with University of Cambridge Online.</p></li>
+          <li><span>July 2026</span><p>Defended SuddSight, my flood-risk prediction capstone.</p></li>
+        </ol>
+      </section>
       <section className={`${s.section} ${s.alt} ${s.split}`}>
         <h2>Leadership, community and life outside work</h2>
         <Placeholder label="More about my leadership, community work and interests to be added" />
@@ -62,6 +73,18 @@ export default function AboutPage() {
             <li>Mastercard Foundation Scholar</li>
             <li>Carbon and ESG Analysis programme, University of Cambridge Online</li>
           </ul>
+          <details className={s.more}>
+            <summary>Other courses and certificates</summary>
+            <ul className={s.list}>
+              <li>Executive Diploma in Business Management and Administration, UCT</li>
+              <li>Professional Diploma in Public Relations and PR Management, UCT</li>
+              <li>Design-Led Strategy, University of Sydney Business School</li>
+              <li>Global Financial Markets and Instruments, Rice University</li>
+              <li>Neural Networks and Deep Learning, DeepLearning.AI</li>
+              <li>Applied Unsupervised Learning in Python, University of Michigan</li>
+              <li>100 Days of Code Python Pro Bootcamp</li>
+            </ul>
+          </details>
         </div>
         <div className={s.photo} style={{ maxWidth: 380 }}>
           <Image src="/images/alu-portrait.jpg" alt="Daniel in a dark suit holding a document folder at African Leadership University" width={850} height={1279} sizes="380px" />

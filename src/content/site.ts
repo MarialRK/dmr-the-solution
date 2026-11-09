@@ -20,10 +20,11 @@ export const navigation = [
   { label: 'Contact', href: '/contact' },
 ]
 
-export const selectedWork = [
+export const selectedWork: { title: string; status: string; summary: string; href?: string }[] = [
   {
     title: 'SuddSight',
     status: 'Deployed research prototype',
+    href: '/work/suddsight',
     summary:
       'Flood-risk prediction for South Sudan’s Sudd Wetland, using historical satellite data and machine learning that explains its reasoning.',
   },

@@ -37,6 +37,7 @@
 .work ul { list-style: none; margin: 56px 0 44px; padding: 0; }
 .work li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; padding: 30px 0; border-top: 1px solid var(--silver); }
 .work li h3 { font-size: clamp(1.8rem, 3vw, 2.9rem); line-height: 1.1; }
+.work li h3 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 6px; }
 .work li p { margin: 0; max-width: 34em; }
 .status { color: var(--graphite); font-size: 1rem; margin-bottom: 6px !important; }
 .textLink { color: var(--black); text-underline-offset: 6px; text-decoration-thickness: 1px; }
@@ -59,6 +60,23 @@
 .articles a { font-family: var(--display); font-size: 1.5rem; text-decoration: none; }
 .articles a:hover { text-decoration: underline; }
 
+.process { background: var(--black); color: var(--white); padding: 120px var(--gutter); }
+.process h2 { font-size: clamp(2.2rem, 4vw, 3.8rem); line-height: 1.08; }
+.process ol { list-style: none; counter-reset: step; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(24px, 3vw, 48px); margin: 60px 0 0; padding: 0; }
+.process li { counter-increment: step; border-top: 1px solid var(--graphite); padding-top: 18px; }
+.process li::before { content: counter(step); font-family: var(--display); font-size: 3.4rem; line-height: 1; display: block; margin-bottom: 26px; color: var(--silver); }
+.process h3 { font-size: 1.6rem; line-height: 1.15; }
+.process p { margin: 12px 0 0; color: var(--mist); }
+
+.gallery { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: center; padding: 0 var(--gutter) 130px; }
+.galleryWide { margin: 0; }
+.galleryWide img { display: block; width: 100%; height: auto; }
+.galleryWide figcaption { margin-top: 10px; color: var(--graphite); font-size: 1rem; }
+.recognition h2 { font-size: clamp(2.2rem, 4vw, 3.8rem); line-height: 1.08; }
+.recognition dl { margin: 32px 0 0; }
+.recognition dt { font-family: var(--display); font-size: 1.55rem; line-height: 1.2; }
+.recognition dd { margin: 4px 0 24px; color: var(--graphite); }
+
 .invitation { background: var(--black); color: var(--white); padding: 140px var(--gutter); }
 .invitation h2 { font-size: clamp(3rem, 8vw, 8rem); line-height: 1; letter-spacing: -0.02em; max-width: 10em; }
 .invert { margin-top: 44px; border-color: var(--white); background: var(--white); color: var(--black); }
@@ -77,4 +95,7 @@
   .practice { padding-bottom: 84px; }
   .work li { gap: 10px; }
   .invitation { padding-block: 96px; }
+  .process { padding-block: 84px; }
+  .process ol { grid-template-columns: 1fr; margin-top: 40px; }
+  .gallery { grid-template-columns: 1fr; padding-bottom: 84px; }
 }

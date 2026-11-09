@@ -90,7 +90,7 @@ export default async function HomePage() {
         <ul>
           {selectedWork.map((item) => (
             <li key={item.title}>
-              <h3>{item.title}</h3>
+              <h3>{item.href ? <Link href={item.href}>{item.title}</Link> : item.title}</h3>
               <div>
                 <p className={styles.status}>{item.status}</p>
                 <p>{item.summary}</p>
@@ -101,6 +101,28 @@ export default async function HomePage() {
         <Link className={styles.textLink} href="/work">
           View all work
         </Link>
+      </section>
+
+      <section className={styles.process}>
+        <h2>How a project works</h2>
+        <ol>
+          <li>
+            <h3>Tell me what you need</h3>
+            <p>Send an enquiry, even if the idea is still rough.</p>
+          </li>
+          <li>
+            <h3>Agree the scope</h3>
+            <p>You receive a written scope and a quotation based on the actual work.</p>
+          </li>
+          <li>
+            <h3>The work gets done</h3>
+            <p>I deliver against the agreed scope and share progress along the way.</p>
+          </li>
+          <li>
+            <h3>You receive the finished work</h3>
+            <p>Final files or a live website, in the formats agreed at the start.</p>
+          </li>
+        </ol>
       </section>
 
       <section className={styles.services}>
@@ -125,6 +147,24 @@ export default async function HomePage() {
       <section className={styles.ventures}>
         <h2>Companies I have founded</h2>
         <Ventures />
+      </section>
+
+      <section className={styles.gallery}>
+        <figure className={styles.galleryWide}>
+          <Image src="/images/alu-group.jpg" alt="Daniel holding a document folder with three others at African Leadership University" width={1280} height={850} sizes="(max-width: 800px) 100vw, 62vw" />
+          <figcaption>At African Leadership University.</figcaption>
+        </figure>
+        <div className={styles.recognition}>
+          <h2>Recognition</h2>
+          <dl>
+            <dt>ALU Ventures Lab Demo Day</dt>
+            <dd>Winner in 2025 with Nile Green Packaging, with a US$30,000 prize.</dd>
+            <dt>Mastercard Foundation Scholar</dt>
+            <dd>African Leadership University.</dd>
+            <dt>Millennium Fellow</dt>
+            <dd>Class of 2024.</dd>
+          </dl>
+        </div>
       </section>
 
       <section className={styles.insights}>
