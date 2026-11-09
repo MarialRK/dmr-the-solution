@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { PageIntro } from '@/components/PageIntro'
 import { Ventures } from '@/components/Ventures'
+import { getPortfolioItems, isSafeLink } from '@/lib/cms'
 import s from '@/components/Inner.module.css'
 
 export const metadata: Metadata = {
@@ -16,7 +17,8 @@ const brands = [
   { name: 'Nile Vertex Properties', src: '/logos/nile-vertex-properties.jpg', w: 906, h: 1080 },
 ]
 
-export default function WorkPage() {
+export default async function WorkPage() {
+  const portfolio = await getPortfolioItems()
   return (
     <>
       <PageIntro title="What I have built, and how far each piece has come." />
@@ -65,6 +67,32 @@ export default function WorkPage() {
           ))}
         </div>
       </section>
+      {portfolio.length ? (
+        <section className={`${s.section} ${s.alt}`}>
+          <h2 className={s.heading}>Portfolio</h2>
+          {portfolio.map((item) => {
+            const image = typeof item.image === 'object' ? item.image : null
+            return (
+              <article className={s.entry} key={item.id}>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p className={s.status}>
+                    {item.category}. {item.status}
+                  </p>
+                  {image?.url ? <Image className={s.entryImage} src={image.url} alt={image.alt} width={image.width ?? 900} height={image.height ?? 600} sizes="(max-width: 800px) 100vw, 45vw" /> : null}
+                </div>
+                <dl>
+                  <dd>{item.description}</dd>
+                  {item.objective ? (<><dt>Objective</dt><dd>{item.objective}</dd></>) : null}
+                  {item.contribution ? (<><dt>My contribution</dt><dd>{item.contribution}</dd></>) : null}
+                  {item.tools ? (<><dt>Tools</dt><dd>{item.tools}</dd></>) : null}
+                  {isSafeLink(item.link) ? (<dd><a href={item.link} rel="noopener noreferrer" target="_blank">View project</a></dd>) : null}
+                </dl>
+              </article>
+            )
+          })}
+        </section>
+      ) : null}
       <section className={`${s.section} ${s.alt}`}>
         <h2 className={s.heading}>Experience</h2>
         <article className={s.entry}>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageIntro } from '@/components/PageIntro'
 import { groups, services } from '@/content/services'
+import { getSettings } from '@/lib/cms'
 import s from '@/components/Inner.module.css'
 
 export const metadata: Metadata = {
@@ -9,7 +10,8 @@ export const metadata: Metadata = {
   description: 'Design, social media, video, websites, business documents, writing, consultancy and ESG advisory from DMR — The Solution.',
 }
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const { hiddenServices } = await getSettings()
   return (
     <>
       <PageIntro
@@ -21,7 +23,7 @@ export default function ServicesPage() {
           <div className={s.group} key={group}>
             <p className={s.groupTitle}>{group}</p>
             {services
-              .filter((service) => service.group === group)
+              .filter((service) => service.group === group && !hiddenServices.includes(service.slug))
               .map((service) => (
                 <Link className={s.serviceRow} href={`/services/${service.slug}`} key={service.slug}>
                   <h3>{service.name}</h3>

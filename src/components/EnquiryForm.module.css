@@ -1,0 +1,23 @@
+.form { display: grid; gap: 8px; max-width: 680px; }
+.form label, .form legend { font-weight: 600; font-size: 1rem; margin-top: 16px; display: block; padding: 0; }
+.form input:not([type='radio']), .form select, .form textarea {
+  width: 100%; font: inherit; color: var(--black); background: var(--white);
+  border: 1px solid var(--graphite); border-radius: 0; padding: 12px 14px; min-height: 48px;
+}
+.form [aria-invalid='true'] { border-color: var(--black); border-width: 2px; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.pair input { margin-top: 8px; }
+.choice { border: 0; margin: 0; padding: 0; }
+.choice label { display: inline-flex; gap: 8px; align-items: center; margin: 10px 28px 0 0; font-weight: 400; font-size: 1.125rem; }
+.error { margin: 2px 0 0; font-size: 1rem; font-weight: 600; }
+.summary { margin: 0 0 8px; padding: 14px 16px; background: var(--black); color: var(--white); }
+.trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.note { margin: 18px 0 8px; color: var(--graphite); font-size: 1rem; }
+.note a { color: inherit; }
+.form button { justify-self: start; font: inherit; padding: 14px 30px; background: var(--black); color: var(--white); border: 1px solid var(--black); cursor: pointer; }
+.form button:hover { background: var(--charcoal); }
+.form button:disabled { background: var(--graphite); border-color: var(--graphite); cursor: wait; }
+.done { max-width: 680px; }
+.done h2 { font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.1; }
+.done p { margin: 16px 0 0; }
+@media (max-width: 640px) { .pair { grid-template-columns: 1fr; gap: 0; } }

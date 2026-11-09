@@ -22,6 +22,10 @@
 .status { color: var(--graphite); font-size: 1rem; }
 .entry .status { margin-top: 8px; }
 .sticky { position: sticky; top: 32px; }
+.entryImage { display: block; width: 100%; height: auto; margin: 14px 0; }
+.article { max-width: 780px; }
+.article h2, .article h3 { margin: 34px 0 12px; }
+.article p { margin: 0 0 20px; }
 .heading { margin-bottom: 40px; }
 .logoGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 40px; align-items: center; }
 .logoGrid img { width: 100%; max-height: 150px; object-fit: contain; mix-blend-mode: multiply; }

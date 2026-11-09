@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { PageIntro } from '@/components/PageIntro'
 import { services } from '@/content/services'
+import { getSettings } from '@/lib/cms'
 import s from '@/components/Inner.module.css'
 
 type Props = { params: Promise<{ slug: string }> }
@@ -20,7 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ServicePage({ params }: Props) {
   const { slug } = await params
   const service = services.find((item) => item.slug === slug)
-  if (!service) notFound()
+  const { hiddenServices } = await getSettings()
+  if (!service || hiddenServices.includes(service.slug)) notFound()
 
   return (
     <>

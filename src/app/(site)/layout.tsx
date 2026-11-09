@@ -6,7 +6,13 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { site } from '@/content/site'
 
+export const revalidate = 300
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+
 export const metadata: Metadata = {
+  metadataBase: siteUrl ? new URL(siteUrl) : undefined,
+  openGraph: { siteName: site.brand, type: 'website', images: [{ url: '/images/portrait-close.jpg' }] },
   title: { default: `${site.name} | ${site.brand}`, template: `%s | ${site.brand}` },
   description:
     'Daniel Marial Reng Kudum is a founder and software engineer working across business, technology, design and sustainability. DMR — The Solution helps people and organisations turn ideas into action.',

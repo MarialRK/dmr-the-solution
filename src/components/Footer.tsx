@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { navigation, site } from '@/content/site'
+import { getSettings } from '@/lib/cms'
 import styles from './Footer.module.css'
 
-export function Footer() {
+export async function Footer() {
+  const settings = await getSettings()
   return (
     <footer className={styles.footer}>
       <div className={styles.brand}>
@@ -15,9 +17,10 @@ export function Footer() {
             {item.label}
           </Link>
         ))}
+        <Link href="/privacy">Privacy</Link>
       </nav>
       <div className={styles.connect}>
-        <a href={site.whatsapp} rel="noopener noreferrer" target="_blank">
+        <a href={settings.whatsapp} rel="noopener noreferrer" target="_blank">
           WhatsApp
         </a>
         {site.socials.map((social) => (

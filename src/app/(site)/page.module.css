@@ -54,6 +54,10 @@
 .insights p { margin: 8px 0 0; max-width: 34em; }
 .insights a { color: var(--black); text-underline-offset: 4px; }
 
+.articles span { display: block; color: var(--graphite); font-size: 1rem; }
+.articles a { font-family: var(--display); font-size: 1.5rem; text-decoration: none; }
+.articles a:hover { text-decoration: underline; }
+
 .invitation { background: var(--black); color: var(--white); padding: 140px var(--gutter); }
 .invitation h2 { font-size: clamp(3rem, 8vw, 8rem); line-height: 1; letter-spacing: -0.02em; max-width: 10em; }
 .invert { margin-top: 44px; border-color: var(--white); background: var(--white); color: var(--black); }

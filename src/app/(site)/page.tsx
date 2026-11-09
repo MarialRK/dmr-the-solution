@@ -2,11 +2,23 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Ventures } from '@/components/Ventures'
 import { selectedWork, serviceGroups, site } from '@/content/site'
+import { formatDate, getArticles, getSettings } from '@/lib/cms'
 import styles from './page.module.css'
 
-export default function HomePage() {
+export default async function HomePage() {
+  const [{ hiddenServices }, articles] = await Promise.all([getSettings(), getArticles(3)])
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  const person = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: site.name,
+    jobTitle: 'Founder',
+    ...(siteUrl ? { url: siteUrl } : {}),
+    sameAs: site.socials.map((social) => social.href),
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person).replace(/</g, '\\u003c') }} />
       <section className={styles.hero}>
         <div className={styles.heroText}>
           <h1>
@@ -98,7 +110,7 @@ export default function HomePage() {
             <div key={group.name}>
               <h3>{group.name}</h3>
               <ul>
-                {group.services.map((service) => (
+                {group.services.filter((service) => !hiddenServices.includes(service.slug)).map((service) => (
                   <li key={service.slug}>
                     <Link href={`/services/${service.slug}`}>{service.name}</Link>
                     {service.note ? <span> ({service.note.toLowerCase()})</span> : null}
@@ -117,14 +129,25 @@ export default function HomePage() {
 
       <section className={styles.insights}>
         <h2>Insights</h2>
-        <p>
-          Writing on building businesses, sustainability and technology will be published here. Until then,
-          you can follow my updates on{' '}
-          <a href={site.socials[0].href} rel="noopener noreferrer" target="_blank">
-            LinkedIn
-          </a>
-          .
-        </p>
+        {articles.length ? (
+          <div className={styles.articles}>
+            {articles.map((article) => (
+              <p key={article.id}>
+                <Link href={`/insights/${article.slug}`}>{article.title}</Link>
+                <span>{formatDate(article.publishedOn)}</span>
+              </p>
+            ))}
+          </div>
+        ) : (
+          <p>
+            Writing on building businesses, sustainability and technology will be published here. Until then, you can
+            follow my updates on{' '}
+            <a href={site.socials[0].href} rel="noopener noreferrer" target="_blank">
+              LinkedIn
+            </a>
+            .
+          </p>
+        )}
       </section>
 
       <section className={styles.invitation}>
