@@ -44,9 +44,22 @@ export default async function MediaPage() {
         <article className={s.entry}>
           <div>
             <h2>ALU Ventures Lab Demo Day</h2>
-            <p className={s.status}>Recognition, 2025</p>
+            <p className={s.status}>Recognition, December 2025</p>
           </div>
-          <p>Nile Green Packaging was named winner, with a US$30,000 prize.</p>
+          <div>
+            <Image className={s.entryImage} src="/images/demo-day-prize.jpg" alt="Daniel on stage holding a US$30,000 prize cheque made out to Nile Green Packaging" width={1280} height={960} sizes="(max-width: 800px) 100vw, 45vw" />
+            <p>Nile Green Packaging was named winner at the African Leadership University Center for Entrepreneurial Leadership’s Ventures Lab Demo Day, with a US$30,000 prize.</p>
+          </div>
+        </article>
+        <article className={s.entry}>
+          <div>
+            <h2>Pitching Nile Green Packaging</h2>
+            <p className={s.status}>Speaking, ALU Ventures Lab</p>
+          </div>
+          <div>
+            <Image className={s.entryImage} src="/images/demo-day-pitch.jpg" alt="Daniel presenting a slide titled Solution, covering structured waste collection and recycling programmes" width={994} height={1280} sizes="(max-width: 800px) 100vw, 30vw" />
+            <p>Presenting the Nile Green Packaging model, from paper packaging to structured waste collection and recycling.</p>
+          </div>
         </article>
         <article className={s.entry}>
           <div>

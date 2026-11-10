@@ -58,7 +58,7 @@ export default function AboutPage() {
           <li><span>2023</span><p>Began studying software engineering at African Leadership University as a Mastercard Foundation Scholar.</p></li>
           <li><span>2024</span><p>Named a Millennium Fellow, and began a year as a Software Engineering Intern at Trinity Technologies.</p></li>
           <li><span>January 2025</span><p>Founded Nile Green Packaging in Juba.</p></li>
-          <li><span>2025</span><p>Won ALU Ventures Lab Demo Day with Nile Green Packaging.</p></li>
+          <li><span>December 2025</span><p>Won ALU Ventures Lab Demo Day with Nile Green Packaging.</p></li>
           <li><span>June 2026</span><p>Completed the Carbon and ESG Analysis programme with University of Cambridge Online.</p></li>
           <li><span>July 2026</span><p>Defended SuddSight, my flood-risk prediction capstone.</p></li>
         </ol>
@@ -99,7 +99,7 @@ export default function AboutPage() {
             <h3>Awards and honours</h3>
             <dl>
               <dt>Winner, ALU Ventures Lab Demo Day</dt>
-              <dd>2025, with Nile Green Packaging. US$30,000 prize.</dd>
+              <dd>December 2025, with Nile Green Packaging. US$30,000 prize.</dd>
               <dt>Mastercard Foundation Scholar</dt>
               <dd>African Leadership University</dd>
               <dt>Millennium Fellow</dt>
