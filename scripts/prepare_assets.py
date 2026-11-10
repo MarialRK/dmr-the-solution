@@ -46,3 +46,5 @@ for n,o in [('nile-green-group','nile-green-group'),('nile-green-packaging','nil
     Image.open(f'{src}logos/{n}.jpg').convert('RGB').save(f'public/logos/{o}.jpg',quality=90)
 jpg('certificate-alu.png','alu-portrait.jpg')
 jpg('portrait-studio-close.png','portrait-close.jpg')
+jpg('cleanup-team.png','cleanup-team.jpg')
+jpg('cleanup-interview.png','cleanup-interview.jpg')

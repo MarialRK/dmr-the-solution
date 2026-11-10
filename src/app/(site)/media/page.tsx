@@ -50,6 +50,16 @@ export default async function MediaPage() {
         </article>
         <article className={s.entry}>
           <div>
+            <h2>Speaking to the media at a clean-up campaign</h2>
+            <p className={s.status}>Event, with Save the Nile</p>
+          </div>
+          <div>
+            <Image className={s.entryImage} src="/images/cleanup-interview.jpg" alt="Daniel in a high-visibility vest, holding a paper bag, speaking to a television camera" width={1080} height={810} sizes="(max-width: 800px) 100vw, 45vw" />
+            <p>Speaking on camera during a clean-up campaign joined by Nile Green Packaging.</p>
+          </div>
+        </article>
+        <article className={s.entry}>
+          <div>
             <h2>At African Leadership University</h2>
             <p className={s.status}>Event details to be added</p>
           </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageIntro } from '@/components/PageIntro'
@@ -51,6 +52,19 @@ export default function WorkPage() {
             <p className={s.status}>In development at Nile Green Packaging</p>
           </div>
           <p>An in-house system for automated waste classification.</p>
+        </article>
+      </section>
+      <section className={s.section}>
+        <h2 className={s.heading}>Community</h2>
+        <article className={s.entry}>
+          <div>
+            <h3>Clean-up campaigns with Save the Nile</h3>
+            <p className={s.status}>Ongoing, from time to time, through Nile Green Packaging</p>
+          </div>
+          <div>
+            <p>Nile Green Packaging joins clean-up campaigns in collaboration with Save the Nile.</p>
+            <Image className={s.entryImage} src="/images/cleanup-team.jpg" alt="Volunteers in high-visibility vests beside filled refuse sacks during a clean-up campaign" width={1080} height={810} sizes="(max-width: 800px) 100vw, 45vw" />
+          </div>
         </article>
       </section>
       <section className={`${s.section} ${s.alt}`}>

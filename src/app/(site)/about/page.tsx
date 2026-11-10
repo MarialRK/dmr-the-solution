@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { PageIntro } from '@/components/PageIntro'
-import { Placeholder } from '@/components/Placeholder'
 import s from '@/components/Inner.module.css'
 
 export const metadata: Metadata = {
@@ -61,8 +60,18 @@ export default function AboutPage() {
         </ol>
       </section>
       <section className={`${s.section} ${s.alt} ${s.split}`}>
-        <h2>Leadership, community and life outside work</h2>
-        <Placeholder label="More about my leadership, community work and interests to be added" />
+        <div className={s.prose}>
+          <h2>Leadership, community and life outside work</h2>
+          <p>
+            Through Nile Green Packaging, I take part in clean-up campaigns from time to time, working in collaboration
+            with Save the Nile. For a company built around reducing plastic waste, it keeps us close to where that waste
+            actually ends up.
+          </p>
+        </div>
+        <figure className={s.figure}>
+          <Image src="/images/cleanup-team.jpg" alt="Daniel in a high-visibility vest holding a paper bag beside volunteers and filled refuse sacks, with a news camera filming" width={1080} height={810} sizes="(max-width: 800px) 100vw, 50vw" />
+          <figcaption>On a clean-up campaign with Save the Nile.</figcaption>
+        </figure>
       </section>
       <section className={`${s.section} ${s.split}`} id="credentials">
         <div className={s.prose}>
