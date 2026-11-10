@@ -151,14 +151,14 @@ export default async function HomePage() {
 
       <section className={styles.gallery}>
         <figure className={styles.galleryWide}>
-          <Image src="/images/alu-group.jpg" alt="Daniel holding a document folder with three others at African Leadership University" width={1280} height={850} sizes="(max-width: 800px) 100vw, 62vw" />
-          <figcaption>At African Leadership University.</figcaption>
+          <Image src="/images/demo-day-prize.jpg" alt="Daniel shaking hands on stage while holding a US$30,000 prize cheque made out to Nile Green Packaging at ALU Ventures Lab Demo Day" width={1280} height={960} sizes="(max-width: 800px) 100vw, 62vw" />
+          <figcaption>Receiving the Ventures Lab Demo Day prize for Nile Green Packaging, December 2025.</figcaption>
         </figure>
         <div className={styles.recognition}>
           <h2>Recognition</h2>
           <dl>
             <dt>ALU Ventures Lab Demo Day</dt>
-            <dd>Winner in 2025 with Nile Green Packaging, with a US$30,000 prize.</dd>
+            <dd>Winner in December 2025 with Nile Green Packaging, with a US$30,000 prize.</dd>
             <dt>Mastercard Foundation Scholar</dt>
             <dd>African Leadership University.</dd>
             <dt>Millennium Fellow</dt>
