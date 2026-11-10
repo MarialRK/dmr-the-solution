@@ -64,30 +64,56 @@ export default function AboutPage() {
         <h2>Leadership, community and life outside work</h2>
         <Placeholder label="More about my leadership, community work and interests to be added" />
       </section>
-      <section className={`${s.section} ${s.split}`}>
+      <section className={`${s.section} ${s.split}`} id="credentials">
         <div className={s.prose}>
-          <h2>Background</h2>
+          <h2>Education, awards and certifications</h2>
           <p>English and Arabic are my working languages, and Dinka is my first language.</p>
-          <ul className={s.facts}>
-            <li>Bachelor’s degree in Computer Software Engineering, African Leadership University, 2023–2026</li>
-            <li>Mastercard Foundation Scholar</li>
-            <li>Carbon and ESG Analysis programme, University of Cambridge Online</li>
-          </ul>
-          <details className={s.more}>
-            <summary>Other courses and certificates</summary>
-            <ul className={s.list}>
-              <li>Executive Diploma in Business Management and Administration, UCT</li>
-              <li>Professional Diploma in Public Relations and PR Management, UCT</li>
-              <li>Design-Led Strategy, University of Sydney Business School</li>
-              <li>Global Financial Markets and Instruments, Rice University</li>
-              <li>Neural Networks and Deep Learning, DeepLearning.AI</li>
-              <li>Applied Unsupervised Learning in Python, University of Michigan</li>
-              <li>100 Days of Code Python Pro Bootcamp</li>
-            </ul>
-          </details>
         </div>
         <div className={s.photo} style={{ maxWidth: 380 }}>
           <Image src="/images/alu-portrait.jpg" alt="Daniel in a dark suit holding a document folder at African Leadership University" width={850} height={1279} sizes="380px" />
+        </div>
+      </section>
+      <section className={`${s.section} ${s.first}`}>
+        <div className={s.credentials}>
+          <div>
+            <h3>Education</h3>
+            <dl>
+              <dt>Bachelor’s degree, Computer Software Engineering</dt>
+              <dd>African Leadership University, 2023–2026</dd>
+            </dl>
+          </div>
+          <div>
+            <h3>Awards and honours</h3>
+            <dl>
+              <dt>Winner, ALU Ventures Lab Demo Day</dt>
+              <dd>2025, with Nile Green Packaging. US$30,000 prize.</dd>
+              <dt>Mastercard Foundation Scholar</dt>
+              <dd>African Leadership University</dd>
+              <dt>Millennium Fellow</dt>
+              <dd>Class of 2024</dd>
+            </dl>
+          </div>
+          <div>
+            <h3>Certifications</h3>
+            <dl>
+              <dt>Carbon and ESG Analysis</dt>
+              <dd>University of Cambridge Online, 2026</dd>
+              <dt>Executive Diploma in Business Management and Administration</dt>
+              <dd>UCT</dd>
+              <dt>Professional Diploma in Public Relations and PR Management</dt>
+              <dd>UCT</dd>
+              <dt>Design-Led Strategy</dt>
+              <dd>University of Sydney Business School</dd>
+              <dt>Global Financial Markets and Instruments</dt>
+              <dd>Rice University</dd>
+              <dt>Neural Networks and Deep Learning</dt>
+              <dd>DeepLearning.AI</dd>
+              <dt>Applied Unsupervised Learning in Python</dt>
+              <dd>University of Michigan</dd>
+              <dt>100 Days of Code: Python Pro Bootcamp</dt>
+              <dd>Completed</dd>
+            </dl>
+          </div>
         </div>
       </section>
     </>

@@ -164,6 +164,9 @@ export default async function HomePage() {
             <dt>Millennium Fellow</dt>
             <dd>Class of 2024.</dd>
           </dl>
+          <Link className={styles.textLink} href="/about#credentials">
+            Education, awards and certifications
+          </Link>
         </div>
       </section>
 
