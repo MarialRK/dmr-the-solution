@@ -57,7 +57,7 @@ export default async function MediaPage() {
             <p className={s.status}>Speaking, ALU Ventures Lab</p>
           </div>
           <div>
-            <Image className={s.entryImage} src="/images/demo-day-pitch.jpg" alt="Daniel presenting a slide titled Solution, covering structured waste collection and recycling programmes" width={994} height={1280} sizes="(max-width: 800px) 100vw, 30vw" />
+            <Image className={`${s.entryImage} ${s.portraitImage}`} src="/images/demo-day-pitch.jpg" alt="Daniel presenting a slide titled Solution, covering structured waste collection and recycling programmes" width={994} height={1280} sizes="(max-width: 800px) 100vw, 30vw" />
             <p>Presenting the Nile Green Packaging model, from paper packaging to structured waste collection and recycling.</p>
           </div>
         </article>

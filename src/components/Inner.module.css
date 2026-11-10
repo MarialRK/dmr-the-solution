@@ -48,6 +48,7 @@
 .figure { margin: 0; }
 .figure img { display: block; width: 100%; height: auto; }
 .figure figcaption { margin-top: 10px; color: var(--graphite); font-size: 1rem; }
+.portraitImage { max-width: 380px; }
 .heading { margin-bottom: 40px; }
 .logoGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 40px; align-items: center; }
 .logoGrid img { width: 100%; max-height: 150px; object-fit: contain; mix-blend-mode: multiply; }
