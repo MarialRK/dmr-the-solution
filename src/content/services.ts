@@ -42,13 +42,15 @@ export const services: Service[] = [
     receives: 'Agreed design files in the formats specified in the project scope.',
     examples: [
       'Logos for DMR, Nile Green Group, Nile Green Packaging and Nile Vertex Properties',
-      'Nile Vertex property catalogue',
+      'Nile Vertex sales and rental property catalogues',
     ],
     visuals: [
       { src: '/logos/dmr-logo-black.svg', alt: 'DMR The Solution logo', width: 3766, height: 1112, caption: 'DMR — The Solution' },
       { src: '/logos/nile-green-group.jpg', alt: 'Nile Green Group logo', width: 1080, height: 590, caption: 'Nile Green Group' },
       { src: '/logos/nile-green-packaging.jpg', alt: 'Nile Green Packaging logo', width: 1024, height: 1024, caption: 'Nile Green Packaging' },
       { src: '/logos/nile-vertex-properties.jpg', alt: 'Nile Vertex Properties logo', width: 906, height: 1080, caption: 'Nile Vertex Properties' },
+      { src: '/work/nvp-sales-cover.jpg', alt: 'Cover of the Kigali Property Sales and Investment Collection catalogue', width: 906, height: 1280, caption: 'Nile Vertex sales catalogue cover' },
+      { src: '/work/nvp-property-kibagabaga.jpg', alt: 'Catalogue property page for a villa in Kibagabaga', width: 890, height: 1280, caption: 'Nile Vertex catalogue property page' },
     ],
   },
   {
@@ -205,7 +207,8 @@ export const services: Service[] = [
     limits: ['No promise of funding, approval or investment.'],
     examples: ['The pitch materials for Nile Green Packaging, winner of ALU Ventures Lab Demo Day in December 2025'],
     visuals: [
-      { src: '/images/demo-day-pitch.jpg', alt: 'Daniel presenting a pitch deck slide titled Solution', width: 994, height: 1280, caption: 'Pitching Nile Green Packaging at ALU Ventures Lab' },
+      { src: '/images/demo-day-pitch.jpg', alt: 'Daniel presenting a pitch deck slide titled Solution', width: 994, height: 1280, caption: 'Pitching Nile Green Packaging at ALU Ventures Lab Demo Day, where it won' },
+      { src: '/work/nvp-sales-intro.jpg', alt: 'Introduction page of the Nile Vertex sales catalogue', width: 990, height: 1280, caption: 'Company presentation for Nile Vertex Properties' },
     ],
   },
   {
@@ -227,6 +230,10 @@ export const services: Service[] = [
       'Digital content',
     ],
     receives: 'A finished document or presentation, with revision rounds agreed in advance.',
+    visuals: [
+      { src: '/work/repos-masterclass-title.jpg', alt: 'Title slide of a masterclass on waste management in solar PV systems', width: 1280, height: 728, caption: 'Masterclass presentation for the REPOS Training of Trainers Programme' },
+      { src: '/work/nvp-sales-intro.jpg', alt: 'Introduction page of the Nile Vertex sales catalogue', width: 990, height: 1280, caption: 'Catalogue writing for Nile Vertex Properties' },
+    ],
   },
   {
     slug: 'consultancy',

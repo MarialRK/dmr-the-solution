@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { PageIntro } from '@/components/PageIntro'
+import { Gallery } from '@/components/Gallery'
 import { Placeholder } from '@/components/Placeholder'
+import { rentalCatalogue, reposDeck, salesCatalogue } from '@/content/samples'
 import { portfolioCategories } from '@/collections/PortfolioItems'
 import { getPortfolioItems, isSafeLink } from '@/lib/cms'
 import type { PortfolioItem } from '@/payload-types'
@@ -41,7 +43,6 @@ function Item({ item }: { item: PortfolioItem }) {
 
 const emptyLabels: Record<string, string> = {
   'Social Media and Digital Communication': 'Social media samples to be added',
-  'Business Documents': 'Selected, approved examples to be added',
 }
 
 export default async function PortfolioPage() {
@@ -54,7 +55,7 @@ export default async function PortfolioPage() {
       <PageIntro title="Work you can look at." intro="Examples are added as they are approved for public view." />
       {portfolioCategories.map((category, index) => (
         <section className={`${s.section} ${index === 0 ? s.first : ''} ${index % 2 ? s.alt : ''}`} key={category}>
-          <h2 className={s.heading}>{category}</h2>
+          <h2 className={s.heading}>{category === 'Business Documents' ? 'Business documents and presentations' : category}</h2>
 
           {category === 'Brand Identity' ? (
             <div className={s.logoGrid}>
@@ -64,13 +65,43 @@ export default async function PortfolioPage() {
             </div>
           ) : null}
 
-          {category === 'Publications and Catalogues' && !has('Nile Vertex property catalogue') ? (
+          {category === 'Publications and Catalogues' ? (
+            <>
+              <article className={s.entry}>
+                <div>
+                  <h3>Kigali Property Sales and Investment Collection</h3>
+                  <p className={s.status}>Nile Vertex Properties, September 2026 edition</p>
+                </div>
+                <dl>
+                  <dd>A sales and investment catalogue presenting homes, land and investment properties across Kigali.</dd>
+                  <dt>My contribution</dt>
+                  <dd>Designed the catalogue and wrote its content.</dd>
+                </dl>
+              </article>
+              <Gallery items={salesCatalogue} columns={4} />
+              <article className={`${s.entry} ${s.galleryBlock}`}>
+                <div>
+                  <h3>Kibagabaga Property Collection</h3>
+                  <p className={s.status}>Nile Vertex Properties, rental catalogue</p>
+                </div>
+                <dl>
+                  <dd>A rental catalogue for homes available in Kibagabaga, Kigali.</dd>
+                  <dt>My contribution</dt>
+                  <dd>Designed the catalogue and wrote its content.</dd>
+                </dl>
+              </article>
+              <Gallery items={rentalCatalogue} columns={4} />
+            </>
+          ) : null}
+
+          {category === 'Business Documents' ? (
             <article className={s.entry}>
               <div>
-                <h3>Nile Vertex property catalogue</h3>
-                <p className={s.status}>Created for Nile Vertex Properties</p>
+                <h3>Waste Management in Solar PV Systems</h3>
+                <p className={s.status}>Presentation for the REPOS Training of Trainers Programme, October 2026</p>
+                <p>A half-day masterclass presentation I wrote and designed.</p>
               </div>
-              <Placeholder label="Catalogue pages to be added" />
+              <Image className={s.entryImage} src={reposDeck.src} alt={reposDeck.alt} width={reposDeck.width} height={reposDeck.height} sizes="(max-width: 800px) 100vw, 45vw" />
             </article>
           ) : null}
 

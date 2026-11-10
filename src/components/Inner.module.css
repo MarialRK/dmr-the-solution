@@ -55,6 +55,9 @@
 .visuals figure { margin: 0; }
 .visuals img { display: block; width: 100%; height: auto; max-height: 380px; object-fit: contain; object-position: left bottom; mix-blend-mode: multiply; }
 .visuals figcaption { margin-top: 8px; color: var(--graphite); font-size: 1rem; }
+.visualsFour { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.visuals .page { max-height: none; mix-blend-mode: normal; box-shadow: 0 0 0 1px var(--mist); }
+.galleryBlock { margin-top: 34px; }
 .heading { margin-bottom: 40px; }
 .logoGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 40px; align-items: center; }
 .logoGrid img { width: 100%; max-height: 150px; object-fit: contain; mix-blend-mode: multiply; }
@@ -83,6 +86,7 @@
   .logoGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .placeholders, .placeholdersTwo { grid-template-columns: 1fr; }
   .visuals { grid-template-columns: 1fr; }
+  .visualsFour { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .timeline li { grid-template-columns: 1fr; gap: 2px; }
   .credentials { grid-template-columns: 1fr; }
 }
