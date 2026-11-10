@@ -41,7 +41,6 @@ function Item({ item }: { item: PortfolioItem }) {
 
 const emptyLabels: Record<string, string> = {
   'Social Media and Digital Communication': 'Social media samples to be added',
-  'Video and Campaign Content': 'Video samples to be added',
   'Business Documents': 'Selected, approved examples to be added',
 }
 
@@ -94,6 +93,22 @@ export default async function PortfolioPage() {
                 <p>This website: brand presentation, portfolio, service catalogue, enquiries and a private content dashboard.</p>
               </div>
               <Image className={s.entryImage} src="/images/dmr-site-home.jpg" alt="The DMR — The Solution homepage" width={1440} height={900} sizes="(max-width: 800px) 100vw, 45vw" />
+            </article>
+          ) : null}
+
+          {category === 'Video and Campaign Content' ? (
+            <article className={s.entry}>
+              <div>
+                <h3>Breast Cancer Awareness Month video</h3>
+                <p className={s.status}>Published on Facebook</p>
+                <p>An awareness video for World Breast Cancer Awareness Month.</p>
+                <p>
+                  <a href="https://www.facebook.com/share/v/1RhVwjwmJJ/" rel="noopener noreferrer" target="_blank">
+                    Watch on Facebook
+                  </a>
+                </p>
+              </div>
+              <Placeholder label="Video still to be added" />
             </article>
           ) : null}
 
