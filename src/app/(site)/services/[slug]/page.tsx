@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { PageIntro } from '@/components/PageIntro'
@@ -90,13 +91,23 @@ export default async function ServicePage({ params }: Props) {
           ) : null}
           <div className={s.block}>
             <h2>Examples</h2>
+            {service.visuals ? (
+              <div className={s.visuals}>
+                {service.visuals.map((visual) => (
+                  <figure key={visual.src}>
+                    <Image src={visual.src} alt={visual.alt} width={visual.width} height={visual.height} sizes="(max-width: 800px) 100vw, 30vw" />
+                    <figcaption>{visual.caption}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            ) : null}
             {service.examples ? (
               <ul className={s.list}>
                 {service.examples.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-            ) : (
+            ) : service.visuals ? null : (
               <Placeholder label="Examples of this work to be added" />
             )}
           </div>

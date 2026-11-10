@@ -14,6 +14,7 @@ export type Service = {
   standards?: string[]
   limits?: string[]
   examples?: string[]
+  visuals?: { src: string; alt: string; width: number; height: number; caption: string }[]
 }
 
 export const groups = ['Creative and communication', 'Digital and technology', 'Business and advisory']
@@ -42,6 +43,12 @@ export const services: Service[] = [
     examples: [
       'Logos for DMR, Nile Green Group, Nile Green Packaging and Nile Vertex Properties',
       'Nile Vertex property catalogue',
+    ],
+    visuals: [
+      { src: '/logos/dmr-logo-black.svg', alt: 'DMR The Solution logo', width: 3766, height: 1112, caption: 'DMR — The Solution' },
+      { src: '/logos/nile-green-group.jpg', alt: 'Nile Green Group logo', width: 1080, height: 590, caption: 'Nile Green Group' },
+      { src: '/logos/nile-green-packaging.jpg', alt: 'Nile Green Packaging logo', width: 1024, height: 1024, caption: 'Nile Green Packaging' },
+      { src: '/logos/nile-vertex-properties.jpg', alt: 'Nile Vertex Properties logo', width: 906, height: 1080, caption: 'Nile Vertex Properties' },
     ],
   },
   {
@@ -124,6 +131,9 @@ export const services: Service[] = [
     ],
     limits: ['No promise of views, reach or campaign outcomes.'],
     examples: ['A personal awareness video for World Breast Cancer Awareness Month, recorded by me and edited with AI tools'],
+    visuals: [
+      { src: '/images/awareness-video-still.jpg', alt: 'Still from an awareness video: Daniel speaking to camera with the Nile Green Packaging logo', width: 330, height: 484, caption: 'Breast Cancer Awareness Month video, October 2026' },
+    ],
   },
   {
     slug: 'website-design-development',
@@ -145,6 +155,9 @@ export const services: Service[] = [
     receives:
       'A written scope, a tested responsive website, deployment and handover notes. I am responsible for delivery, testing and any maintenance you agree.',
     limits: ['Complex systems are not offered under this service.'],
+    visuals: [
+      { src: '/images/dmr-site-home.jpg', alt: 'The DMR — The Solution homepage', width: 1440, height: 900, caption: 'This website' },
+    ],
   },
   {
     slug: 'software-digital-solutions',
@@ -190,6 +203,10 @@ export const services: Service[] = [
     ],
     receives: 'A finished document in an agreed format, with revision rounds agreed in advance.',
     limits: ['No promise of funding, approval or investment.'],
+    examples: ['The pitch materials for Nile Green Packaging, winner of ALU Ventures Lab Demo Day in December 2025'],
+    visuals: [
+      { src: '/images/demo-day-pitch.jpg', alt: 'Daniel presenting a pitch deck slide titled Solution', width: 994, height: 1280, caption: 'Pitching Nile Green Packaging at ALU Ventures Lab' },
+    ],
   },
   {
     slug: 'professional-writing',
@@ -229,7 +246,11 @@ export const services: Service[] = [
       'Digital strategy and choosing a sensible approach for a website or simple digital product',
     ],
     receives: 'Agreed consultation sessions and written recommendations.',
+    examples: ['Founding Nile Green Packaging and taking it from pilot production towards automated manufacturing'],
     limits: ['If your request falls outside these areas, I will tell you.'],
+    visuals: [
+      { src: '/images/demo-day-prize.jpg', alt: 'Daniel on stage with a US$30,000 prize cheque made out to Nile Green Packaging', width: 1280, height: 960, caption: 'Winning competitive funding for Nile Green Packaging, December 2025' },
+    ],
   },
   {
     slug: 'esg-advisory',
