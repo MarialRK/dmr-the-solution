@@ -53,11 +53,15 @@ export default async function MediaPage() {
         </article>
         <article className={s.entry}>
           <div>
-            <h2>Interview after the ALU Ventures Lab programme</h2>
-            <p className={s.status}>Interview, published on Facebook</p>
+            <h2>Interviewed by African Leadership University</h2>
+            <p className={s.status}>Interview, 2026</p>
           </div>
           <div>
-            <p>An interview recorded after I completed the ALU Ventures Lab programme with Nile Green Packaging.</p>
+            <Image className={s.entryImage} src="/images/alu-interview.jpg" alt="Daniel being interviewed outdoors, captioned Daniel Marial Reng Kudum, Founder, Nile Green Packaging Ltd" width={1330} height={722} sizes="(max-width: 800px) 100vw, 45vw" />
+            <p>
+              After I completed the ALU Ventures Lab programme, African Leadership University interviewed me about Nile
+              Green Packaging and its work against plastic pollution in South Sudan.
+            </p>
             <p>
               <a href="https://www.facebook.com/share/v/1C9ypfz3s2/" rel="noopener noreferrer" target="_blank">
                 Watch the interview on Facebook

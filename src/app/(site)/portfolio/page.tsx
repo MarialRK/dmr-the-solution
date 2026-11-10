@@ -100,7 +100,7 @@ export default async function PortfolioPage() {
             <article className={s.entry}>
               <div>
                 <h3>Breast Cancer Awareness Month video</h3>
-                <p className={s.status}>Personal video, published on Facebook</p>
+                <p className={s.status}>Personal video, published October 2026</p>
                 <p>A personal awareness video for World Breast Cancer Awareness Month.</p>
                 <dl>
                   <dt>My contribution</dt>
@@ -112,7 +112,7 @@ export default async function PortfolioPage() {
                   </a>
                 </p>
               </div>
-              <Placeholder label="Video still to be added" />
+              <Image className={`${s.entryImage} ${s.portraitImage}`} src="/images/awareness-video-still.jpg" alt="Still from the awareness video: Daniel speaking to camera, with the Nile Green Packaging logo" width={330} height={484} sizes="330px" />
             </article>
           ) : null}
 
