@@ -53,6 +53,20 @@ export default async function MediaPage() {
         </article>
         <article className={s.entry}>
           <div>
+            <h2>Interview after the ALU Ventures Lab programme</h2>
+            <p className={s.status}>Interview, published on Facebook</p>
+          </div>
+          <div>
+            <p>An interview recorded after I completed the ALU Ventures Lab programme with Nile Green Packaging.</p>
+            <p>
+              <a href="https://www.facebook.com/share/v/1C9ypfz3s2/" rel="noopener noreferrer" target="_blank">
+                Watch the interview on Facebook
+              </a>
+            </p>
+          </div>
+        </article>
+        <article className={s.entry}>
+          <div>
             <h2>Pitching Nile Green Packaging</h2>
             <p className={s.status}>Speaking, ALU Ventures Lab</p>
           </div>
@@ -79,8 +93,7 @@ export default async function MediaPage() {
           <Image className={s.entryImage} src="/images/alu-group.jpg" alt="Daniel holding a document folder with three others at African Leadership University" width={1280} height={850} sizes="(max-width: 800px) 100vw, 45vw" />
         </article>
         {appearances.length ? null : (
-          <div className={s.placeholders}>
-            <Placeholder label="Interviews to be added" />
+          <div className={`${s.placeholders} ${s.placeholdersTwo}`}>
             <Placeholder label="Speaking engagements to be added" />
             <Placeholder label="Conferences and events to be added" />
           </div>
