@@ -89,7 +89,7 @@ export const ventures = [
     height: 1024,
     role: 'Founder. Part of Nile Green Group.',
     summary:
-      'Biodegradable paper packaging from Juba, South Sudan, moving from pilot production to automated manufacturing. Winner of ALU Ventures Lab Demo Day 2025, with a US$30,000 prize.',
+      'Biodegradable paper packaging from Juba, South Sudan, moving from pilot production to automated manufacturing. Winner of ALU Ventures Lab Demo Day in December 2025, with a US$30,000 prize.',
   },
   {
     name: 'Nile Vertex Properties',
