@@ -27,6 +27,10 @@ export function Ventures() {
           </article>
         ))}
       </div>
+      <figure className={styles.figure}>
+        <Image src="/images/production-site.jpg" alt="Daniel in a safety vest and gloves sorting stacks of paper bags at Nile Green Packaging" width={1280} height={718} sizes="(max-width: 800px) 100vw, 90vw" />
+        <figcaption>At Nile Green Packaging’s manual production site.</figcaption>
+      </figure>
       <p className={styles.separate}>These are separate businesses. They are not part of DMR’s services.</p>
     </>
   )

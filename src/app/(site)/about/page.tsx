@@ -32,6 +32,10 @@ export default function AboutPage() {
             with pilot production and is now moving towards automated manufacturing. In 2025 it won ALU
             Ventures Lab Demo Day, with a US$30,000 prize.
           </p>
+          <figure className={s.figure}>
+            <Image src="/images/production-site.jpg" alt="Daniel sorting stacks of paper bags at Nile Green Packaging" width={1280} height={718} sizes="(max-width: 800px) 100vw, 50vw" />
+            <figcaption>At our manual production site.</figcaption>
+          </figure>
           <h2>Using software on problems close to home</h2>
           <p>
             SuddSight, my software engineering capstone, applies machine learning and satellite data to flood

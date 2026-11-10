@@ -8,5 +8,8 @@
 .logo { height: 120px; display: flex; align-items: center; margin-bottom: 26px; }
 .logo img { max-height: 120px; width: auto; max-width: 200px; mix-blend-mode: multiply; }
 .list h3 { font-size: 1.75rem; line-height: 1.15; }
+.figure { margin: 64px 0 0; }
+.figure img { display: block; width: 100%; height: auto; }
+.figure figcaption { margin-top: 10px; color: var(--graphite); font-size: 1rem; }
 .separate { margin: 52px 0 0; color: var(--graphite); font-size: 1rem; }
 @media (max-width: 800px) { .holding, .list { grid-template-columns: 1fr; } }
