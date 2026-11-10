@@ -123,7 +123,7 @@ export const services: Service[] = [
       'Music and visual material must be licensed for your use.',
     ],
     limits: ['No promise of views, reach or campaign outcomes.'],
-    examples: ['An awareness video for World Breast Cancer Awareness Month, published on Facebook'],
+    examples: ['A personal awareness video for World Breast Cancer Awareness Month, recorded by me and edited with AI tools'],
   },
   {
     slug: 'website-design-development',

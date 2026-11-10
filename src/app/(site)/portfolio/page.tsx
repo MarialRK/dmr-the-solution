@@ -100,8 +100,12 @@ export default async function PortfolioPage() {
             <article className={s.entry}>
               <div>
                 <h3>Breast Cancer Awareness Month video</h3>
-                <p className={s.status}>Published on Facebook</p>
-                <p>An awareness video for World Breast Cancer Awareness Month.</p>
+                <p className={s.status}>Personal video, published on Facebook</p>
+                <p>A personal awareness video for World Breast Cancer Awareness Month.</p>
+                <dl>
+                  <dt>My contribution</dt>
+                  <dd>Recorded the video myself, then edited it with AI tools.</dd>
+                </dl>
                 <p>
                   <a href="https://www.facebook.com/share/v/1RhVwjwmJJ/" rel="noopener noreferrer" target="_blank">
                     Watch on Facebook
