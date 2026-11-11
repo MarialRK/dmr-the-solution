@@ -58,3 +58,21 @@ export const formatDate = (value: string) =>
   new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(value))
 
 export const isSafeLink = (value?: string | null): value is string => Boolean(value && /^https?:\/\//i.test(value))
+
+export type InsightSummary = { id: string; slug: string; title: string; summary: string; publishedOn: string }
+
+export async function getInsights(limit?: number): Promise<InsightSummary[]> {
+  const { writtenArticles } = await import('@/content/articles')
+  const fromCms = (await getArticles()).map((article) => ({
+    id: String(article.id),
+    slug: article.slug,
+    title: article.title,
+    summary: article.summary,
+    publishedOn: article.publishedOn,
+  }))
+  const written = writtenArticles
+    .filter((article) => !fromCms.some((item) => item.slug === article.slug))
+    .map(({ slug, title, summary, publishedOn }) => ({ id: slug, slug, title, summary, publishedOn }))
+  const all = [...fromCms, ...written].sort((a, b) => b.publishedOn.localeCompare(a.publishedOn))
+  return limit ? all.slice(0, limit) : all
+}

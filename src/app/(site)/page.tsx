@@ -2,11 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Ventures } from '@/components/Ventures'
 import { selectedWork, serviceGroups, site } from '@/content/site'
-import { formatDate, getArticles, getSettings } from '@/lib/cms'
+import { formatDate, getInsights, getSettings } from '@/lib/cms'
 import styles from './page.module.css'
 
 export default async function HomePage() {
-  const [{ hiddenServices }, articles] = await Promise.all([getSettings(), getArticles(3)])
+  const [{ hiddenServices }, articles] = await Promise.all([getSettings(), getInsights(3)])
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
   const person = {
     '@context': 'https://schema.org',

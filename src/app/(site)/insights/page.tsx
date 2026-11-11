@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { PageIntro } from '@/components/PageIntro'
 import { Placeholder } from '@/components/Placeholder'
 import { site } from '@/content/site'
-import { formatDate, getArticles } from '@/lib/cms'
+import { formatDate, getInsights } from '@/lib/cms'
 import s from '@/components/Inner.module.css'
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 }
 
 export default async function InsightsPage() {
-  const articles = await getArticles()
+  const articles = await getInsights()
   return (
     <>
       <PageIntro title="Insights" intro="Writing on building businesses, sustainability and technology." />
