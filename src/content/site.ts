@@ -50,6 +50,7 @@ export const serviceGroups = [
     name: 'Creative and communication',
     services: [
       { name: 'Graphic design and branding', slug: 'graphic-design-branding' },
+      { name: 'Business cards: printed, smart and digital', slug: 'business-cards' },
       { name: 'Social media management and digital communication', slug: 'social-media-management' },
       { name: 'AI-powered video production and campaign content', slug: 'ai-video-production' },
     ],

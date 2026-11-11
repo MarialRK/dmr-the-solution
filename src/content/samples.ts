@@ -25,4 +25,17 @@ export const cardConcepts: Sample[] = [
   { src: '/work/card-concept-premium.jpg', alt: 'Concept premium black business card with gold foil lettering, front and back', width: 1600, height: 1000, caption: 'Premium black card with gold foil finish' },
   { src: '/work/card-concept-classic.jpg', alt: 'Concept two-sided printed business card for a coffee roaster', width: 1600, height: 1000, caption: 'Classic two-sided printed card' },
   { src: '/work/card-concept-vertical.jpg', alt: 'Concept vertical two-sided business card for an architecture studio', width: 1600, height: 1000, caption: 'Vertical two-sided card' },
+  { src: '/work/card-concept-metal.jpg', alt: 'Concept brushed metal and matte black business cards', width: 1600, height: 1000, caption: 'Metal card, brushed steel and matte black' },
+  { src: '/work/card-concept-frosted.jpg', alt: 'Concept frosted transparent business cards for a dental clinic', width: 1600, height: 1000, caption: 'Frosted transparent card' },
+  { src: '/work/card-concept-recycled.jpg', alt: 'Concept recycled kraft paper business cards for a farm', width: 1600, height: 1000, caption: 'Recycled kraft card' },
+  { src: '/work/card-concept-letterpress.jpg', alt: 'Concept white letterpress business card with an embossed monogram', width: 1600, height: 1000, caption: 'Letterpress card with embossed monogram' },
+  { src: '/work/card-concept-square.jpg', alt: 'Concept set of square business cards in yellow, white and orange', width: 1600, height: 1000, caption: 'Square mini card set' },
 ]
+
+export const dmrWallet: Sample = {
+  src: '/work/card-concept-dmr-wallet.jpg',
+  alt: 'Two phones showing a DMR phone wallet pass with a QR code and a DMR digital profile for Daniel Marial Reng',
+  width: 1600,
+  height: 1000,
+  caption: 'Phone wallet pass and digital profile, designed for DMR — The Solution',
+}

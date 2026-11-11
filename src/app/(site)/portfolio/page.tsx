@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { PageIntro } from '@/components/PageIntro'
 import { Gallery } from '@/components/Gallery'
 import { Placeholder } from '@/components/Placeholder'
-import { cardConcepts, rentalCatalogue, reposDeck, salesCatalogue } from '@/content/samples'
+import { cardConcepts, dmrWallet, rentalCatalogue, reposDeck, salesCatalogue } from '@/content/samples'
 import { portfolioCategories } from '@/collections/PortfolioItems'
 import { getPortfolioItems, isSafeLink } from '@/lib/cms'
 import type { PortfolioItem } from '@/payload-types'
@@ -84,15 +85,20 @@ export default async function PortfolioPage() {
             <>
               <article className={`${s.entry} ${s.galleryBlock}`}>
                 <div>
-                  <h3>Business card concepts</h3>
-                  <p className={s.status}>Concept samples for fictional brands</p>
+                  <h3>Business cards by DMR</h3>
+                  <p className={s.status}>A service I offer: printed, smart and digital cards</p>
                 </div>
-                <p>
-                  Examples of the card formats I design: smart NFC cards with a digital profile, premium finishes, classic
-                  printed cards and vertical layouts. The brands and people shown are invented.
-                </p>
+                <div>
+                  <p>
+                    Alongside my own card, these concept samples show the range of formats I design. The brands and people on
+                    the concept cards are invented.
+                  </p>
+                  <p>
+                    <Link href="/services/business-cards">See the business card service</Link>
+                  </p>
+                </div>
               </article>
-              <Gallery items={cardConcepts} />
+              <Gallery items={[dmrWallet, ...cardConcepts]} />
             </>
           ) : null}
 

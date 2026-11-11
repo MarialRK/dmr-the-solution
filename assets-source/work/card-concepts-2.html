@@ -1,0 +1,155 @@
+<!doctype html><html><head><meta charset="utf-8">
+
+<style>@font-face{font-family:Fraunces;src:url(node_modules/@fontsource-variable/fraunces/files/fraunces-latin-wght-normal.woff2);font-weight:100 900}
+@font-face{font-family:Manrope;src:url(node_modules/@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2);font-weight:200 800}
+@font-face{font-family:Syne;src:url(node_modules/@fontsource/syne/files/syne-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:Syne;src:url(node_modules/@fontsource/syne/files/syne-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:'Cormorant Garamond';src:url(node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:'Cormorant Garamond';src:url(node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-500-normal.woff2);font-weight:500}
+
+*{box-sizing:border-box;margin:0}
+body{font-family:Manrope,sans-serif}
+.scene{width:1600px;height:1000px;position:relative;overflow:hidden}
+.card{position:absolute;width:700px;height:400px;border-radius:18px;box-shadow:0 40px 80px -30px rgba(0,0,0,.45),0 8px 18px -8px rgba(0,0,0,.25);overflow:hidden}
+.v{width:400px;height:700px}
+/* scene 1 classic */
+#s1{background:linear-gradient(140deg,#e9e3d8,#d8cfbf)}
+#s1 .front{left:170px;top:300px;transform:rotate(-7deg);background:#f6f0e6;color:#3b2a1e;padding:56px}
+#s1 .back{left:720px;top:190px;transform:rotate(6deg);background:#4a3426;color:#f3e9da;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px}
+.bean{width:74px;height:74px;border-radius:50%;border:3px solid currentColor;position:relative}
+.bean:after{content:'';position:absolute;left:34px;top:8px;width:3px;height:56px;background:currentColor;border-radius:3px;transform:rotate(18deg)}
+#s1 .wm{font-family:Fraunces;font-size:44px;letter-spacing:.02em}
+#s1 .sub{font-size:15px;letter-spacing:.32em;text-transform:uppercase;opacity:.8}
+#s1 .name{font-family:Fraunces;font-size:38px;font-weight:600}
+#s1 .role{font-size:19px;margin-top:6px;opacity:.75}
+#s1 .lines{position:absolute;left:56px;bottom:50px;font-size:18px;line-height:1.7}
+#s1 .front .mark{position:absolute;right:56px;top:56px;color:#a0714f}
+/* scene 2 premium */
+#s2{background:radial-gradient(circle at 30% 30%,#3a3a3c,#141415)}
+#s2 .back{left:180px;top:170px;transform:rotate(-5deg);background:#0d0d0d;display:flex;align-items:center;justify-content:center}
+#s2 .front{left:700px;top:380px;transform:rotate(4deg);background:#111;color:#e8e2d4;padding:58px}
+.foil{background:linear-gradient(115deg,#9c7a3c,#f1d892 35%,#b38b45 55%,#f6e3a8 75%,#9a773a);-webkit-background-clip:text;color:transparent}
+#s2 .mono{font-family:'Cormorant Garamond';font-size:120px;font-weight:600;letter-spacing:.04em}
+#s2 .firm{font-family:'Cormorant Garamond';font-size:30px;letter-spacing:.38em}
+#s2 .name{font-family:'Cormorant Garamond';font-size:46px;font-weight:600}
+#s2 .role{font-size:16px;letter-spacing:.28em;text-transform:uppercase;margin-top:8px;color:#a39d90}
+#s2 .rule{width:70px;height:2px;margin:30px 0;background:linear-gradient(90deg,#b38b45,#f1d892)}
+#s2 .lines{font-size:18px;line-height:1.75;color:#cfc8b8}
+/* scene 3 smart */
+#s3{background:linear-gradient(160deg,#dfe8f2,#c4d3e3)}
+#s3 .card{left:150px;top:330px;transform:rotate(-6deg);background:linear-gradient(135deg,#14213d,#1f3b73);color:#fff;padding:52px}
+#s3 .brand{font-family:Syne;font-size:40px;font-weight:700;letter-spacing:.01em}
+#s3 .brand span{color:#56d6c4}
+#s3 .tag{font-size:16px;opacity:.75;margin-top:4px}
+#s3 .who{position:absolute;left:52px;bottom:52px}
+#s3 .who b{font-size:28px;display:block}
+#s3 .who i{font-style:normal;opacity:.75;font-size:17px}
+#s3 .qr{position:absolute;right:52px;bottom:52px;width:132px;height:132px;padding:12px;background:#14213d;border-radius:12px;border:1px solid rgba(255,255,255,.25)}
+#s3 .qr img{width:100%;display:block}
+#s3 .nfc{position:absolute;right:58px;top:52px;display:flex;align-items:center;gap:10px;font-size:15px;letter-spacing:.14em;text-transform:uppercase}
+.waves{width:30px;height:30px;position:relative}
+.waves i{position:absolute;border:3px solid #56d6c4;border-left-color:transparent;border-bottom-color:transparent;border-radius:50%;transform:rotate(45deg)}
+.waves i:nth-child(1){width:12px;height:12px;left:0;top:9px}.waves i:nth-child(2){width:22px;height:22px;left:-5px;top:4px}.waves i:nth-child(3){width:32px;height:32px;left:-10px;top:-1px}
+.phone{position:absolute;left:1000px;top:110px;width:400px;height:810px;border-radius:56px;background:#0b0b0c;padding:14px;box-shadow:0 50px 90px -30px rgba(0,0,0,.5);transform:rotate(4deg)}
+.screen{width:100%;height:100%;border-radius:44px;background:#fff;overflow:hidden;position:relative}
+.top{height:250px;background:linear-gradient(135deg,#14213d,#1f3b73);color:#fff;padding:70px 34px 0}
+.avatar{position:absolute;left:50%;top:180px;transform:translateX(-50%);width:132px;height:132px;border-radius:50%;background:linear-gradient(135deg,#56d6c4,#2b6cb0);border:6px solid #fff;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Syne;font-size:44px}
+.pname{text-align:center;margin-top:84px;font-size:27px;font-weight:700;color:#14213d}
+.prole{text-align:center;color:#55627a;font-size:16px;margin-top:4px}
+.btns{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:26px 24px}
+.btns div{border:1px solid #dde3ec;border-radius:14px;padding:16px 0 12px;text-align:center;font-size:13px;color:#14213d}
+.btns div:before{content:'';display:block;width:22px;height:22px;border-radius:6px;background:#1f3b73;margin:0 auto 8px}
+.save{margin:6px 24px;background:#14213d;color:#fff;text-align:center;border-radius:14px;padding:18px;font-weight:600}
+.about{padding:22px 28px;color:#55627a;font-size:15px;line-height:1.55}
+/* scene 4 vertical */
+#s4{background:linear-gradient(150deg,#e6ebe4,#cfd9cc)}
+#s4 .front{left:420px;top:150px;transform:rotate(-5deg);background:#fbfbf8;color:#1d2a22;padding:60px 52px}
+#s4 .back{left:820px;top:170px;transform:rotate(5deg);background:#3e5546;color:#eef2ec;display:flex;flex-direction:column;justify-content:space-between;padding:60px 52px}
+#s4 .sq{width:58px;height:58px;border:3px solid currentColor;position:relative}
+#s4 .sq:after{content:'';position:absolute;left:14px;top:14px;width:24px;height:24px;background:currentColor}
+#s4 .name{font-family:Fraunces;font-size:40px;line-height:1.1;margin-top:250px}
+#s4 .role{margin-top:12px;font-size:17px;color:#5d6b62}
+#s4 .lines{position:absolute;left:52px;bottom:56px;font-size:17px;line-height:1.75}
+#s4 .studio{font-family:Fraunces;font-size:46px;line-height:1.05}
+#s4 .small{font-size:15px;letter-spacing:.3em;text-transform:uppercase;opacity:.8}
+
+.scene2{width:1600px;height:1000px;position:relative;overflow:hidden}
+/* metal */
+#m{background:radial-gradient(circle at 70% 20%,#5b5f66,#1d1f23)}
+.metal{background:linear-gradient(115deg,#8d9198,#d7dadf 30%,#9fa3aa 48%,#e3e5e9 66%,#8a8e95);color:#24262a}
+.metal:before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.07) 0 1px,rgba(0,0,0,.04) 1px 2px)}
+#m .a{left:190px;top:280px;transform:rotate(-8deg);padding:58px}
+#m .b{left:760px;top:250px;transform:rotate(7deg);background:linear-gradient(115deg,#1b1c1f,#3a3c41 45%,#17181a)}
+.etch{font-family:Syne;font-weight:700;font-size:54px;letter-spacing:.06em;position:relative}
+.etchs{position:relative;font-size:17px;letter-spacing:.3em;text-transform:uppercase;margin-top:8px;opacity:.7}
+#m .who{position:absolute;left:58px;bottom:58px}
+#m .who b{display:block;font-size:26px}
+#m .b .etch{position:absolute;left:0;right:0;top:150px;text-align:center;background:linear-gradient(115deg,#9fa3aa,#e8eaed,#9fa3aa);-webkit-background-clip:text;color:transparent}
+/* frosted */
+#f{background:linear-gradient(130deg,#ffd8c2,#f6a6b2 45%,#b8c6ff)}
+.frost{background:rgba(255,255,255,.28);backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,.7)!important;color:#2b2140}
+#f .a{left:230px;top:220px;transform:rotate(-6deg);padding:56px}
+#f .b{left:760px;top:370px;transform:rotate(5deg);padding:56px}
+.blob{position:absolute;border-radius:50%;filter:blur(2px)}
+#f .t{font-family:Fraunces;font-size:48px}
+#f .s{font-size:16px;letter-spacing:.3em;text-transform:uppercase;margin-top:8px}
+#f .who b{font-size:30px;font-family:Fraunces;display:block}
+/* kraft */
+#k{background:linear-gradient(150deg,#e8eadf,#c9cfbd)}
+.kraft{background:#c49a6c;color:#2f2416}
+.kraft:after{content:'';position:absolute;inset:0;background:radial-gradient(rgba(70,40,10,.18) 1px,transparent 1.5px) 0 0/7px 7px;opacity:.6}
+#k .a{left:200px;top:300px;transform:rotate(-7deg);padding:56px}
+#k .b{left:760px;top:200px;transform:rotate(5deg);display:flex;align-items:center;justify-content:center;flex-direction:column}
+.leaf{width:70px;height:70px;border:3px solid currentColor;border-radius:0 70px 0 70px;position:relative;z-index:1}
+#k .t{font-family:Fraunces;font-size:46px;position:relative;z-index:1;margin-top:16px}
+#k .s{font-size:15px;letter-spacing:.3em;text-transform:uppercase;position:relative;z-index:1;margin-top:6px}
+#k .note{position:absolute;right:56px;bottom:46px;font-size:14px;z-index:1;opacity:.8}
+.rel{position:relative;z-index:1}
+/* letterpress */
+#l{background:linear-gradient(150deg,#ececea,#d9d9d5)}
+.paper{background:#fafaf7;color:#2a2a2a}
+#l .a{left:250px;top:260px;transform:rotate(-4deg);padding:60px}
+#l .b{left:770px;top:330px;transform:rotate(6deg);display:flex;align-items:center;justify-content:center}
+.emboss{color:#fafaf7;text-shadow:-1px -1px 1px rgba(255,255,255,.9),1.5px 1.5px 2px rgba(0,0,0,.22);font-family:'Cormorant Garamond';font-weight:600}
+#l .b .emboss{font-size:96px;letter-spacing:.08em}
+#l .name{font-family:'Cormorant Garamond';font-size:44px;font-weight:600}
+#l .role{font-size:15px;letter-spacing:.3em;text-transform:uppercase;color:#7a7a72;margin-top:8px}
+#l .lines{position:absolute;left:60px;bottom:56px;font-size:17px;line-height:1.75;color:#55554f}
+/* square mini */
+#q{background:linear-gradient(150deg,#1e1e22,#3a3a42)}
+.sqc{width:420px;height:420px}
+#q .a{left:300px;top:300px;transform:rotate(-8deg);background:#f2c14e;color:#1e1e22;padding:46px}
+#q .b{left:690px;top:180px;transform:rotate(4deg);background:#fff;color:#1e1e22;padding:46px}
+#q .c{left:1020px;top:360px;transform:rotate(11deg);background:#e4572e;color:#fff;padding:46px}
+#q .big{font-family:Syne;font-weight:700;font-size:64px;line-height:.95}
+#q .sm{position:absolute;left:46px;bottom:40px;font-size:16px}
+/* wallet DMR */
+#w{background:linear-gradient(150deg,#e9eaeb,#bfc0c2)}
+#w .phone{left:220px;top:90px;transform:rotate(-4deg)}
+#w .phone2{left:930px;top:120px;transform:rotate(5deg)}
+.pass{margin:70px 22px 0;border-radius:22px;background:#0a0a0a;color:#fff;padding:26px;height:560px;position:relative}
+.pass img.logo{width:190px}
+.pass .lbl{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#bfc0c2;margin-top:34px}
+.pass .val{font-size:24px;font-weight:600;margin-top:4px}
+.pass .qrbox{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);background:#fff;padding:12px;border-radius:12px;width:170px}
+.pass .qrbox img{width:100%;display:block}
+.prof{padding:0}
+.prof .hero{height:230px;background:#000;padding:54px 30px 0}
+.prof .hero img{width:210px}
+.prof .av{position:absolute;left:50%;top:170px;transform:translateX(-50%);width:120px;height:120px;border-radius:50%;background:#bfc0c2;border:6px solid #fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond';font-size:46px;font-weight:600;color:#000}
+.prof .nm{text-align:center;margin-top:76px;font-size:25px;font-weight:700}
+.prof .rl{text-align:center;color:#55575b;font-size:15px;margin-top:4px}
+.prof .btns div:before{background:#000}
+.prof .save{background:#000}
+.cap{position:absolute;font-size:18px;color:#2c2d2f;letter-spacing:.02em}
+</style></head><body>
+<div class="scene2" id="m"><div class="card metal a"><div class="etch">OKAVO</div><div class="etchs">Capital</div><div class="who"><b>David Lual</b>Investment Director</div></div><div class="card b"><div class="etch">OKAVO</div></div></div>
+<div class="scene2" id="f"><div class="blob" style="width:420px;height:420px;left:380px;top:120px;background:#fff6"></div><div class="card frost a"><div class="t">Lumea</div><div class="s">Dental clinic</div></div><div class="card frost b"><div class="who"><b>Dr. Nora Atem</b>Lead Dentist</div><div style="position:absolute;left:56px;bottom:56px;font-size:17px;line-height:1.7">nora@lumeadental.com<br>lumeadental.com</div></div></div>
+<div class="scene2" id="k"><div class="card kraft a"><div class="rel" style="font-family:Fraunces;font-size:36px;font-weight:600">Peter Garang</div><div class="rel" style="font-size:18px;margin-top:6px">Farm Manager</div><div class="rel" style="position:absolute;left:56px;bottom:52px;font-size:17px;line-height:1.7">peter@teralofarms.com<br>teralofarms.com</div><div class="note">Printed on recycled card</div></div><div class="card kraft b"><div class="leaf"></div><div class="t">Teralo</div><div class="s">Farms</div></div></div>
+<div class="scene2" id="l"><div class="card paper a"><div class="name">Rebecca Kesto</div><div class="role">Advocate</div><div class="lines">Kesto &amp; Partners<br>rebecca@kestopartners.com</div></div><div class="card paper b"><div class="emboss">K&amp;P</div></div></div>
+<div class="scene2" id="q"><div class="card sqc a"><div class="big">Omelo<br>Photo</div><div class="sm">omelophoto.com</div></div><div class="card sqc b"><div class="big" style="font-size:44px">Mary<br>Omelo</div><div class="sm">Photographer</div></div><div class="card sqc c"><div class="big" style="font-size:52px">Book a<br>shoot</div><div class="sm">hello@omelophoto.com</div></div></div>
+<div class="scene2" id="w">
+ <div class="phone"><div class="screen" style="background:#f2f2f2"><div class="pass"><img class="logo" src="dmr-logo-white.svg"><div class="lbl">Name</div><div class="val">Daniel Marial Reng Kudum</div><div class="lbl">Brand</div><div class="val">DMR — The Solution</div><div class="qrbox"><img src="qr-dark.png"></div></div></div></div>
+ <div class="phone phone2"><div class="screen prof"><div class="hero"><img src="dmr-logo-white.svg"></div><div class="av">DM</div><div class="nm">Daniel Marial Reng</div><div class="rl">Founder</div><div class="btns"><div>Call</div><div>WhatsApp</div><div>Email</div><div>Share</div></div><div class="save">Save contact</div><div class="about">Phone wallet pass and digital profile, designed by DMR — The Solution.</div></div></div>
+</div>
+</body></html>

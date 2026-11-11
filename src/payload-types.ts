@@ -541,6 +541,7 @@ export interface SiteSetting {
   hiddenServices?:
     | (
         | 'graphic-design-branding'
+        | 'business-cards'
         | 'social-media-management'
         | 'ai-video-production'
         | 'website-design-development'
