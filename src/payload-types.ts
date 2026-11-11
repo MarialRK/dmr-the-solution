@@ -69,6 +69,8 @@ export interface Config {
   collections: {
     enquiries: Enquiry;
     articles: Article;
+    projects: Project;
+    'service-texts': ServiceText;
     appearances: Appearance;
     'portfolio-items': PortfolioItem;
     uploads: Upload;
@@ -82,6 +84,8 @@ export interface Config {
   collectionsSelect: {
     enquiries: EnquiriesSelect<false> | EnquiriesSelect<true>;
     articles: ArticlesSelect<false> | ArticlesSelect<true>;
+    projects: ProjectsSelect<false> | ProjectsSelect<true>;
+    'service-texts': ServiceTextsSelect<false> | ServiceTextsSelect<true>;
     appearances: AppearancesSelect<false> | AppearancesSelect<true>;
     'portfolio-items': PortfolioItemsSelect<false> | PortfolioItemsSelect<true>;
     uploads: UploadsSelect<false> | UploadsSelect<true>;
@@ -96,9 +100,11 @@ export interface Config {
   };
   fallbackLocale: null;
   globals: {
+    'about-page': AboutPage;
     'site-settings': SiteSetting;
   };
   globalsSelect: {
+    'about-page': AboutPageSelect<false> | AboutPageSelect<true>;
     'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
   };
   locale: null;
@@ -178,6 +184,61 @@ export interface Article {
   };
   publishedOn: string;
   published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Projects added here appear on the Work page, after the existing projects.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects".
+ */
+export interface Project {
+  id: number;
+  title: string;
+  /**
+   * Be specific, for example: In development, Completed 2026, Concept
+   */
+  status: string;
+  description: string;
+  link?: string | null;
+  /**
+   * Lower numbers appear first
+   */
+  order?: number | null;
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Change the wording of a service page. Choose the service, then fill in only the parts you want to change. Anything left empty keeps the current wording.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "service-texts".
+ */
+export interface ServiceText {
+  id: number;
+  service:
+    | 'graphic-design-branding'
+    | 'business-cards'
+    | 'social-media-management'
+    | 'ai-video-production'
+    | 'website-design-development'
+    | 'software-digital-solutions'
+    | 'business-documentation'
+    | 'professional-writing'
+    | 'consultancy'
+    | 'esg-advisory';
+  /**
+   * For example: Available now
+   */
+  availability?: string | null;
+  summary?: string | null;
+  description?: string | null;
+  problem?: string | null;
+  audience?: string | null;
+  scope?: string | null;
+  receives?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -311,6 +372,14 @@ export interface PayloadLockedDocument {
         value: number | Article;
       } | null)
     | ({
+        relationTo: 'projects';
+        value: number | Project;
+      } | null)
+    | ({
+        relationTo: 'service-texts';
+        value: number | ServiceText;
+      } | null)
+    | ({
         relationTo: 'appearances';
         value: number | Appearance;
       } | null)
@@ -398,6 +467,36 @@ export interface ArticlesSelect<T extends boolean = true> {
   body?: T;
   publishedOn?: T;
   published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects_select".
+ */
+export interface ProjectsSelect<T extends boolean = true> {
+  title?: T;
+  status?: T;
+  description?: T;
+  link?: T;
+  order?: T;
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "service-texts_select".
+ */
+export interface ServiceTextsSelect<T extends boolean = true> {
+  service?: T;
+  availability?: T;
+  summary?: T;
+  description?: T;
+  problem?: T;
+  audience?: T;
+  scope?: T;
+  receives?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -530,6 +629,22 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   createdAt?: T;
 }
 /**
+ * Change the heading and opening paragraphs of the About page. Leave a field empty to keep the current wording.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "about-page".
+ */
+export interface AboutPage {
+  id: number;
+  headline?: string | null;
+  /**
+   * Leave an empty line between paragraphs.
+   */
+  introduction?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "site-settings".
  */
@@ -554,6 +669,17 @@ export interface SiteSetting {
     | null;
   updatedAt?: string | null;
   createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "about-page_select".
+ */
+export interface AboutPageSelect<T extends boolean = true> {
+  headline?: T;
+  introduction?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

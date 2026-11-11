@@ -1,7 +1,7 @@
 export const site = {
   name: 'Daniel Marial Reng Kudum',
   brand: 'DMR — The Solution',
-  tagline: 'Your Solutions. Turning Ideas into Action.',
+  tagline: 'The Solution',
   whatsapp: 'https://wa.me/250798619965',
   socials: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/daniel-marial-reng-kudum-6b128b364' },

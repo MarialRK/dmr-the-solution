@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <>
-      <PageIntro title="Privacy policy" intro="Last updated 9 November 2026." />
+      <PageIntro title="Privacy policy" intro="Last updated 11 November 2026." />
       <section className={`${s.section} ${s.first}`}>
         <div className={s.block}>
           <h2>Who is responsible</h2>
@@ -22,6 +22,13 @@ export default function PrivacyPage() {
             When you send an enquiry, I receive your name, email address, country, any organisation you give, your
             message and your preferred timeline. A scrambled code derived from your connection is stored for a limited
             spam check. It does not record your actual internet address.
+          </p>
+        </div>
+        <div className={s.block}>
+          <h2>Visit statistics</h2>
+          <p>
+            The website counts visits and the pages people view, using Vercel Web Analytics. It does not use cookies, and it
+            does not identify you personally.
           </p>
         </div>
         <div className={s.block}>

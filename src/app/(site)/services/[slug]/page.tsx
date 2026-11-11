@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 import { PageIntro } from '@/components/PageIntro'
 import { Placeholder } from '@/components/Placeholder'
 import { services } from '@/content/services'
-import { getSettings } from '@/lib/cms'
+import { getServices, getSettings } from '@/lib/cms'
 import s from '@/components/Inner.module.css'
 
 type Props = { params: Promise<{ slug: string }> }
@@ -16,13 +16,13 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const service = services.find((item) => item.slug === slug)
+  const service = (await getServices()).find((item) => item.slug === slug)
   return service ? { title: service.name, description: service.summary } : {}
 }
 
 export default async function ServicePage({ params }: Props) {
   const { slug } = await params
-  const service = services.find((item) => item.slug === slug)
+  const service = (await getServices()).find((item) => item.slug === slug)
   const { hiddenServices } = await getSettings()
   if (!service || hiddenServices.includes(service.slug)) notFound()
 

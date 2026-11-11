@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { PageIntro } from '@/components/PageIntro'
+import { getAboutPage } from '@/lib/cms'
 import s from '@/components/Inner.module.css'
 
 export const metadata: Metadata = {
@@ -8,15 +9,20 @@ export const metadata: Metadata = {
   description: 'Daniel Marial Reng Kudum is a South Sudanese entrepreneur and software engineer, and the founder of Nile Green Group.',
 }
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const about = await getAboutPage()
   return (
     <>
-      <PageIntro title="Steady work, in service of the places I come from." />
+      <PageIntro title={about.headline || 'Steady work, in service of the places I come from.'} />
       <section className={`${s.section} ${s.first} ${s.split}`}>
         <div className={s.photo}>
           <Image src="/images/flags-hall.jpg" alt="Daniel standing beside the flag of South Sudan in a hall of national flags" width={720} height={1280} sizes="(max-width: 800px) 100vw, 42vw" priority />
         </div>
         <div className={s.prose}>
+          {about.paragraphs.length ? (
+            about.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+          ) : (
+            <>
           <p>
             I am a South Sudanese entrepreneur and software engineer. I work across business, technology,
             design and sustainability, because the problems I care about rarely stay inside one discipline.
@@ -26,11 +32,13 @@ export default function AboutPage() {
             including Nile Green Packaging in Juba and Nile Vertex Properties in Kigali. I want these
             businesses to create real economic value while contributing to sustainable development and jobs.
           </p>
+            </>
+          )}
           <h2>Building a company around a plastic problem</h2>
           <p>
             Nile Green Packaging makes biodegradable paper packaging to replace single-use plastic. It began by importing
             bags to fill customer orders, added its own manual production, and is now working towards automated
-            manufacturing. In 2025 it won ALU
+            manufacturing. In December 2025 it won ALU
             Ventures Lab Demo Day, with a US$30,000 prize.
           </p>
           <figure className={s.figure}>

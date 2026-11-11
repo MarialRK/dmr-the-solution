@@ -11,6 +11,9 @@ import { Enquiries } from './collections/Enquiries'
 import { PortfolioItems } from './collections/PortfolioItems'
 import { Uploads } from './collections/Uploads'
 import { Users } from './collections/Users'
+import { Projects } from './collections/Projects'
+import { ServiceTexts } from './collections/ServiceTexts'
+import { AboutPage } from './globals/AboutPage'
 import { SiteSettings } from './globals/SiteSettings'
 import { migrations } from './migrations'
 
@@ -18,8 +21,8 @@ const dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default buildConfig({
   admin: { user: Users.slug, avatar: 'default', meta: { titleSuffix: ' | DMR dashboard' }, importMap: { baseDir: dirname } },
-  collections: [Enquiries, Articles, Appearances, PortfolioItems, Uploads, Users],
-  globals: [SiteSettings],
+  collections: [Enquiries, Articles, Projects, ServiceTexts, Appearances, PortfolioItems, Uploads, Users],
+  globals: [AboutPage, SiteSettings],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   graphQL: { disable: true },

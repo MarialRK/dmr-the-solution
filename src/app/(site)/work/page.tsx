@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageIntro } from '@/components/PageIntro'
 import { Ventures } from '@/components/Ventures'
+import { getProjects, isSafeLink } from '@/lib/cms'
 import s from '@/components/Inner.module.css'
 
 export const metadata: Metadata = {
@@ -10,7 +11,8 @@ export const metadata: Metadata = {
   description: 'Companies founded, projects built and creative work by Daniel Marial Reng Kudum, each shown with its current status.',
 }
 
-export default function WorkPage() {
+export default async function WorkPage() {
+  const projects = await getProjects()
   return (
     <>
       <PageIntro title="What I have built, and how far each piece has come." />
@@ -53,6 +55,24 @@ export default function WorkPage() {
           </div>
           <p>An in-house system for automated waste classification.</p>
         </article>
+        {projects.map((project) => (
+          <article className={s.entry} key={project.id}>
+            <div>
+              <h3>{project.title}</h3>
+              <p className={s.status}>{project.status}</p>
+            </div>
+            <div>
+              <p>{project.description}</p>
+              {isSafeLink(project.link) ? (
+                <p>
+                  <a href={project.link} rel="noopener noreferrer" target="_blank">
+                    View project
+                  </a>
+                </p>
+              ) : null}
+            </div>
+          </article>
+        ))}
       </section>
       <section className={s.section}>
         <h2 className={s.heading}>Community</h2>

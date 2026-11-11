@@ -27,9 +27,17 @@ export const services: Service[] = [
     group: groups[0],
     availability: 'Available now',
     action: 'Request a quote',
-    summary: 'Logos, identities and materials that make an organisation or person recognisable.',
-    description: 'Visual identity and materials that give an organisation or person a clear, consistent appearance.',
-    problem: 'A visual presence that is missing, inconsistent or does not match the ambition behind it.',
+    summary: 'Logos, identities and printed materials that make people remember you.',
+    description: 'A strong identity makes a business look established from the first glance. I design logos, brand identities and materials that stay consistent everywhere they appear, from a signboard to a social media profile.',
+    problem: 'Many good businesses look smaller than they are: a logo made in a hurry, colours that change from one document to the next, materials that do not match. Clients notice, even when they do not say so.',
+    process: [
+      'You tell me about your business, your customers and what you want to be known for.',
+      'I develop design directions and share them with you.',
+      'We refine the chosen direction together.',
+      'I prepare the final logo, colours and materials.',
+      'You receive every file you need, ready for print and screen.',
+    ],
+    audience: 'New businesses that need an identity from scratch, and established ones whose look no longer matches the quality of their work.',
     scope: [
       'Logo design',
       'Corporate identity development',
@@ -40,7 +48,7 @@ export const services: Service[] = [
       'Digital graphics',
       'Visual communication',
     ],
-    receives: 'Agreed design files in the formats specified in the project scope.',
+    receives: 'Final design files in every format you need for print and screen, with simple guidelines so your brand stays consistent.',
     examples: [
       'Logos for DMR, Nile Green Group, Nile Green Packaging and Nile Vertex Properties',
       'Nile Vertex sales and rental property catalogues',
@@ -113,11 +121,17 @@ export const services: Service[] = [
     group: groups[0],
     availability: 'Available now',
     action: 'Request a quote',
-    summary: 'Planning, creating and running a consistent presence for people and organisations.',
-    description:
-      'Planning, creating and managing a consistent social media presence, for individuals building a personal brand and organisations strengthening their digital presence.',
-    problem:
-      'Accounts that are inactive, inconsistent or disconnected from what the person or organisation wants to be known for.',
+    summary: 'A consistent, professional presence on the platforms your audience actually uses.',
+    description: 'I plan, create and manage social media for people building a personal brand and for organisations strengthening their presence online, so your accounts say clearly who you are and what you do.',
+    problem: 'Accounts that post in bursts and then go quiet, look different on every platform, or never quite say what the business does. People judge a business by its page long before they make contact.',
+    process: [
+      'We agree your goals, your audience and the platforms that matter.',
+      'I prepare a plan and content calendar for your approval.',
+      'I create and schedule the posts and graphics.',
+      'I manage engagement within the limits we agree.',
+      'You receive regular reports on how your accounts are performing.',
+    ],
+    audience: 'Professionals and founders building a personal brand, and businesses, NGOs and institutions that need a steady, credible presence.',
     scope: [
       'Social media account management',
       'Social media strategy and planning',
@@ -132,11 +146,10 @@ export const services: Service[] = [
       'Digital presence development and consistency',
       'Performance monitoring and reporting',
     ],
-    receives:
-      'As agreed in the scope: a plan or content calendar, the agreed posts and graphics, scheduling and publishing, community management within agreed limits, and periodic performance reports.',
+    receives: 'As agreed in your plan: a content calendar, posts and graphics, scheduling and publishing, community management, and regular performance reports.',
     limits: [
-      'No promise of specific audience growth, engagement rates or commercial results.',
-      'No purchased followers or artificial engagement.',
+      'Growth comes from consistent, genuine work, so I do not promise specific follower numbers, engagement rates or sales.',
+      'I never use purchased followers or artificial engagement.',
     ],
   },
   {
@@ -145,10 +158,9 @@ export const services: Service[] = [
     group: groups[0],
     availability: 'Available now',
     action: 'Request a quote',
-    summary: 'Complete videos, from the message and script through to the finished film.',
-    description:
-      'Turning ideas, information and messages into complete videos through concept development, scriptwriting, AI tools and digital production.',
-    problem: 'An important message with no practical way of turning it into engaging video.',
+    summary: 'Complete videos, from your message and script to the finished film.',
+    description: 'I turn ideas, information and campaign messages into finished videos, combining concept development, scriptwriting, AI tools and careful editing. You bring the message; I take it all the way to a video people will watch.',
+    problem: 'Many organisations have something important to say and no practical way to say it on video. Filming is costly, and a poorly made video can do more harm than good.',
     audience:
       'Individuals and personal brands, businesses and entrepreneurs, NGOs and civil society organisations, development organisations, institutions, campaign teams, and public-awareness and advocacy programmes.',
     scope: [
@@ -178,17 +190,15 @@ export const services: Service[] = [
       'Add narration, music, subtitles and branding where appropriate.',
       'Deliver the final video in the formats you need.',
     ],
-    receives: 'The script, a storyboard if in scope, and the final video in the agreed formats and languages.',
+    receives: 'Your script, a storyboard where included, and the finished video in the formats and languages you need.',
     standards: [
       'AI-generated content is clearly distinguished from real documentary footage.',
       'No fabricated real events, endorsements, people or evidence.',
       'A real person’s face or voice is used only with that person’s consent.',
       'Music and visual material must be licensed for your use.',
     ],
-    limits: ['No promise of views, reach or campaign outcomes.'],
-    examples: ['A personal awareness video for World Breast Cancer Awareness Month, recorded by me and edited with AI tools'],
-    visuals: [
-      { src: '/images/awareness-video-still.jpg', alt: 'Still from an awareness video: Daniel speaking to camera with the Nile Green Packaging logo', width: 330, height: 484, caption: 'Breast Cancer Awareness Month video, October 2026' },
+    limits: [
+      'Reach depends on many factors, so I do not promise specific views or campaign results.',
     ],
   },
   {
@@ -197,9 +207,17 @@ export const services: Service[] = [
     group: groups[1],
     availability: 'Available now, with defined project scopes',
     action: 'Request a quote',
-    summary: 'Websites with an agreed scope, built around what the site needs to do.',
-    description: 'Websites with an agreed scope, designed around what you need the site to do.',
-    problem: 'Being hard to find online, or having a website that does not reflect the quality of your work.',
+    summary: 'Professional websites with a clear scope, built and looked after properly.',
+    description: 'I design and build websites that present you or your organisation well and are easy for visitors to use, with a clear scope agreed before any work begins.',
+    problem: 'For many clients, your website is the first and only place they decide whether to get in touch. If it is hard to find, slow or out of date, they quietly move on.',
+    process: [
+      'We agree what the site needs to do and write it into a clear scope.',
+      'I design the pages and share them for your review.',
+      'I build the site and test it on computers and phones.',
+      'The site goes live on your domain.',
+      'You receive handover notes, and ongoing maintenance if you want it.',
+    ],
+    audience: 'Professionals, personal brands, small and medium-sized businesses and organisations.',
     scope: [
       'Business and corporate websites',
       'Personal and professional websites',
@@ -208,11 +226,9 @@ export const services: Service[] = [
       'Website redesign and improvement',
       'Maintenance and updates on an agreed plan',
     ],
-    receives:
-      'A written scope, a tested responsive website, deployment and handover notes. I am responsible for delivery, testing and any maintenance you agree.',
-    limits: ['Complex systems are not offered under this service.'],
-    visuals: [
-      { src: '/images/dmr-site-home.jpg', alt: 'The DMR — The Solution homepage', width: 1440, height: 900, caption: 'This website' },
+    receives: 'A tested website that works on computers and phones, live on your domain, with handover notes. I remain responsible for delivery, testing and any maintenance we agree.',
+    limits: [
+      'Complex custom systems are handled separately, by enquiry.',
     ],
   },
   {
@@ -221,10 +237,14 @@ export const services: Service[] = [
     group: groups[1],
     availability: 'By enquiry only',
     action: 'Start an enquiry',
-    summary: 'A conversation first, to establish whether a digital tool is the right answer.',
-    description:
-      'A conversation first, to establish whether a digital tool is the right answer and whether it can be delivered and supported responsibly.',
-    problem: 'Manual or disconnected processes that may benefit from a simple digital solution.',
+    summary: 'Digital tools for real problems, starting with a conversation.',
+    description: 'Sometimes a simple digital tool can save hours of manual work. Sometimes it cannot. We start with a conversation to find out which is true for you, and whether a solution can be delivered and supported properly.',
+    problem: 'Processes that depend on paper, spreadsheets passed around by hand, or information that lives in too many places.',
+    process: [
+      'You describe the process or problem.',
+      'I assess honestly whether a digital tool is the right answer.',
+      'If it is, we agree a written scope before anything is built.',
+    ],
     scope: [
       'Smaller web-based tools and systems',
       'Digital platforms',
@@ -233,8 +253,10 @@ export const services: Service[] = [
       'Digital product development',
       'Technical consultation and digital product support',
     ],
-    receives: 'An initial assessment. Any build proceeds only under a separately agreed scope.',
-    limits: ['Complex custom systems are not currently offered.'],
+    receives: 'An honest initial assessment. Any build goes ahead only under a separately agreed scope.',
+    limits: [
+      'Large, complex custom systems are not currently offered.',
+    ],
     examples: ['SuddSight, a flood-risk prediction research prototype'],
   },
   {
@@ -243,9 +265,17 @@ export const services: Service[] = [
     group: groups[2],
     availability: 'Available now',
     action: 'Request a quote',
-    summary: 'Plans, proposals, profiles and pitch decks for the people who need to say yes.',
-    description: 'Documents that explain a business or project clearly to the people who need to say yes.',
-    problem: 'Good ideas and real businesses held back by weak or missing documentation.',
+    summary: 'Plans, proposals, profiles and pitch decks that help people say yes.',
+    description: 'The right document can open doors that a conversation alone cannot. I write and design business plans, proposals, profiles and pitch decks that explain your business clearly to the people you need to convince.',
+    problem: 'Good ideas and real businesses are often held back by documents that are unclear, too long or unconvincing, at exactly the moment a funder, partner or client is deciding.',
+    process: [
+      'You share your business, your audience and what the document needs to achieve.',
+      'I structure the content and agree the outline with you.',
+      'I write and design the full document.',
+      'We refine it through agreed revision rounds.',
+      'You receive the final document, ready to send or present.',
+    ],
+    audience: 'Founders, small businesses, NGOs and organisations preparing to approach funders, partners, government or clients.',
     scope: [
       'Business plans',
       'Business profiles',
@@ -257,12 +287,9 @@ export const services: Service[] = [
       'Pitch decks',
       'Business development documentation and support',
     ],
-    receives: 'A finished document in an agreed format, with revision rounds agreed in advance.',
-    limits: ['No promise of funding, approval or investment.'],
-    examples: ['The pitch materials for Nile Green Packaging, winner of ALU Ventures Lab Demo Day in December 2025'],
-    visuals: [
-      { src: '/images/demo-day-pitch.jpg', alt: 'Daniel presenting a pitch deck slide titled Solution', width: 994, height: 1280, caption: 'Pitching Nile Green Packaging at ALU Ventures Lab Demo Day, where it won' },
-      { src: '/work/nvp-sales-intro.jpg', alt: 'Introduction page of the Nile Vertex sales catalogue', width: 990, height: 1280, caption: 'Company presentation for Nile Vertex Properties' },
+    receives: 'A finished, professionally designed document in the format you need, with revision rounds agreed in advance.',
+    limits: [
+      'A strong document improves your chances, but no one can guarantee funding, approval or investment.',
     ],
   },
   {
@@ -271,9 +298,16 @@ export const services: Service[] = [
     group: groups[2],
     availability: 'Available now',
     action: 'Request a quote',
-    summary: 'Reports, documents and presentations that are ready for their audience.',
-    description: 'Clear professional writing and presentations for business and institutional audiences.',
-    problem: 'Important information that is hard to read, poorly structured or not ready for its audience.',
+    summary: 'Reports, presentations and documents that are clear, credible and ready to use.',
+    description: 'I turn complex information into writing and presentations people can read, understand and act on, for business, institutional and development audiences.',
+    problem: 'Important work loses its impact when the report is hard to follow or the presentation does not hold the room.',
+    process: [
+      'You share the material, the audience and the purpose.',
+      'I agree the structure with you.',
+      'I write, edit and design the document or presentation.',
+      'You review it, and I make the agreed revisions.',
+    ],
+    audience: 'Businesses, NGOs, development organisations, institutions and professionals.',
     scope: [
       'Professional reports',
       'Institutional documents',
@@ -283,7 +317,7 @@ export const services: Service[] = [
       'Strategic communication materials',
       'Digital content',
     ],
-    receives: 'A finished document or presentation, with revision rounds agreed in advance.',
+    receives: 'A finished document or presentation, ready for its audience, with revision rounds agreed in advance.',
     visuals: [
       { src: '/work/repos-masterclass-title.jpg', alt: 'Title slide of a masterclass on waste management in solar PV systems', width: 1280, height: 728, caption: 'Masterclass presentation for the REPOS Training of Trainers Programme' },
       { src: '/work/nvp-sales-intro.jpg', alt: 'Introduction page of the Nile Vertex sales catalogue', width: 990, height: 1280, caption: 'Catalogue writing for Nile Vertex Properties' },
@@ -295,10 +329,16 @@ export const services: Service[] = [
     group: groups[2],
     availability: 'Available in defined areas',
     action: 'Request a quote',
-    summary: 'Practical guidance drawn from what I have actually built.',
-    description:
-      'Practical guidance drawn from what I have actually built, not general expertise across every technology or discipline.',
-    problem: 'Needing a practical second opinion before committing time or money.',
+    summary: 'Practical advice from someone who has built things himself.',
+    description: 'Practical advice drawn from building Nile Green Packaging and SuddSight, not from theory. I work in the areas where I have real experience, and I will tell you if your question falls outside them.',
+    problem: 'Founders and organisations often need a practical second opinion before committing time or money, from someone who has faced similar decisions.',
+    process: [
+      'You explain the decision or challenge you are facing.',
+      'We agree the questions the consultation should answer.',
+      'We meet for the agreed sessions.',
+      'You receive written recommendations you can act on.',
+    ],
+    audience: 'Early-stage founders, small businesses and organisations planning a new venture, product or funding application.',
     scope: [
       'Starting and structuring an early-stage venture',
       'Preparing for competitive funding and pitching',
@@ -319,10 +359,16 @@ export const services: Service[] = [
     group: groups[2],
     availability: 'Available for early-stage work',
     action: 'Request a quote',
-    summary: 'A practical starting point for smaller organisations beginning ESG and carbon work.',
-    description:
-      'A practical starting point for smaller organisations beginning to take ESG and carbon seriously. I completed the Carbon and ESG Analysis programme with University of Cambridge Online.',
-    problem: 'Being asked about sustainability by funders or partners, without knowing where to begin.',
+    summary: 'A practical first step into ESG and carbon for smaller organisations.',
+    description: 'Funders and partners increasingly ask about environmental, social and governance performance. I help smaller organisations take a practical first step, drawing on the Carbon and ESG Analysis programme I completed with University of Cambridge Online and my experience building a sustainability business.',
+    problem: 'Being asked about sustainability by a funder or partner without knowing where to start, or what a credible answer looks like.',
+    process: [
+      'We discuss where your organisation stands and why ESG matters to you now.',
+      'You share the information I need.',
+      'I prepare the review, estimate or plan.',
+      'We go through the findings together.',
+    ],
+    audience: 'Small and medium-sized businesses, startups and NGOs at the start of their ESG journey.',
     scope: [
       'ESG starting-point review',
       'Introductory carbon analysis: an estimate from your own data, with methods and assumptions stated',

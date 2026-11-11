@@ -76,3 +76,46 @@ export async function getInsights(limit?: number): Promise<InsightSummary[]> {
   const all = [...fromCms, ...written].sort((a, b) => b.publishedOn.localeCompare(a.publishedOn))
   return limit ? all.slice(0, limit) : all
 }
+
+export async function getServices() {
+  const { services } = await import('@/content/services')
+  try {
+    const cms = await getCms()
+    const { docs } = await cms.find({ collection: 'service-texts', limit: 100, depth: 0, overrideAccess: false })
+    return services.map((service) => {
+      const edit = docs.find((doc) => doc.service === service.slug)
+      if (!edit) return service
+      const scope = edit.scope?.split('\n').map((line) => line.trim()).filter(Boolean)
+      return {
+        ...service,
+        availability: edit.availability || service.availability,
+        summary: edit.summary || service.summary,
+        description: edit.description || service.description,
+        problem: edit.problem || service.problem,
+        audience: edit.audience || service.audience,
+        scope: scope?.length ? scope : service.scope,
+        receives: edit.receives || service.receives,
+      }
+    })
+  } catch (error) {
+    console.error('Could not load service wording', error)
+    return services
+  }
+}
+
+export async function getAboutPage(): Promise<{ headline?: string | null; paragraphs: string[] }> {
+  try {
+    const cms = await getCms()
+    const about = await cms.findGlobal({ slug: 'about-page', overrideAccess: false })
+    const paragraphs = (about.introduction ?? '').split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
+    return { headline: about.headline, paragraphs }
+  } catch (error) {
+    console.error('Could not load About page', error)
+    return { paragraphs: [] }
+  }
+}
+
+export const getProjects = async () => {
+  const cms = await getCms()
+  return list(() => cms.find({ collection: 'projects', overrideAccess: false, sort: 'order', limit: 100, depth: 0 }))
+}

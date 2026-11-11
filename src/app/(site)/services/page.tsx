@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageIntro } from '@/components/PageIntro'
-import { groups, services } from '@/content/services'
-import { getSettings } from '@/lib/cms'
+import { groups } from '@/content/services'
+import { getServices, getSettings } from '@/lib/cms'
 import s from '@/components/Inner.module.css'
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 }
 
 export default async function ServicesPage() {
-  const { hiddenServices } = await getSettings()
+  const [{ hiddenServices }, services] = await Promise.all([getSettings(), getServices()])
   return (
     <>
       <PageIntro

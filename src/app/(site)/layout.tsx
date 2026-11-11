@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import '@fontsource-variable/bodoni-moda/index.css'
 import '@fontsource-variable/hanken-grotesk/index.css'
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: { siteName: site.brand, type: 'website', images: [{ url: '/images/portrait-close.jpg' }] },
   title: { default: `${site.name} | ${site.brand}`, template: `%s | ${site.brand}` },
   description:
-    'Daniel Marial Reng Kudum is a founder and software engineer working across business, technology, design and sustainability. DMR — The Solution helps people and organisations turn ideas into action.',
+    'Daniel Marial Reng Kudum is a founder and software engineer working across business, technology, design and sustainability. DMR — The Solution offers design, digital, communication and business services to clients internationally.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
