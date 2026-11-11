@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Suspense } from 'react'
 import { EnquiryForm } from '@/components/EnquiryForm'
 import { PageIntro } from '@/components/PageIntro'
 import { services } from '@/content/services'
@@ -12,7 +11,8 @@ export const metadata: Metadata = {
   description: 'Contact Daniel Marial Reng Kudum about a project, service or idea.',
 }
 
-export default async function ContactPage() {
+export default async function ContactPage({ searchParams }: { searchParams: Promise<{ service?: string | string[] }> }) {
+  const { service } = await searchParams
   const settings = await getSettings()
   const available = services
     .filter((service) => !settings.hiddenServices.includes(service.slug))
@@ -22,9 +22,7 @@ export default async function ContactPage() {
     <>
       <PageIntro title="Tell me what you need." intro="Clients are welcome from anywhere. Send an enquiry here, or message me on WhatsApp." />
       <section className={`${s.section} ${s.first} ${s.split}`}>
-        <Suspense>
-          <EnquiryForm services={available} />
-        </Suspense>
+          <EnquiryForm services={available} preselected={typeof service === 'string' ? service : undefined} />
         <div>
           <a className={s.button} href={settings.whatsapp} rel="noopener noreferrer" target="_blank">
             Message me on WhatsApp

@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import Script from 'next/script'
-import { useSearchParams } from 'next/navigation'
 import { startTransition, useActionState, type FormEvent } from 'react'
 import { submitEnquiry, type EnquiryState } from '@/app/(site)/contact/actions'
 import styles from './EnquiryForm.module.css'
@@ -21,10 +20,9 @@ function FieldError({ id, message }: { id: string; message?: string }) {
   ) : null
 }
 
-export function EnquiryForm({ services }: { services: Option[] }) {
+export function EnquiryForm({ services, preselected }: { services: Option[]; preselected?: string }) {
   const [state, action, pending] = useActionState(submitEnquiry, initial)
-  const params = useSearchParams()
-  const selected = services.find((service) => service.slug === params.get('service'))?.name ?? ''
+  const selected = services.find((service) => service.slug === preselected)?.name ?? ''
   const errors = state.errors ?? {}
 
   // Submitting this way keeps what the visitor typed when a field needs correcting.
