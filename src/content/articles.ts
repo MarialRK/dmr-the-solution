@@ -13,17 +13,17 @@ export const writtenArticles: WrittenArticle[] = [
     slug: 'what-a-paper-bag-taught-me',
     title: 'What a paper bag taught me about building in South Sudan',
     summary:
-      'Making biodegradable bags turned out to be the easier part. The harder work is convincing a market, and a government, that the switch from plastic matters now.',
+      'Replacing single-use plastic in South Sudan has been anything but easy. Here is what makes it hard, and why we are not giving up.',
     publishedOn: '2026-11-11T00:00:00.000Z',
     body: [
       {
         type: 'p',
-        text: 'When I started Nile Green Packaging in Juba in January 2025, the idea fitted in one sentence: make biodegradable paper bags to replace single-use plastic. I assumed the hardest part would be production. It turned out to be something else entirely: getting people to see why they should buy them.',
+        text: 'When I started Nile Green Packaging in Juba in January 2025, the idea fitted in one sentence: replace single-use plastic bags with biodegradable paper ones. Making that idea work in South Sudan has been anything but easy. The environment we work in tests a young company at every step, and the hardest part has not been the bags themselves. It has been getting people to see why they should buy them.',
       },
-      { type: 'h2', text: 'Start with your hands' },
+      { type: 'h2', text: 'Making and sourcing' },
       {
         type: 'p',
-        text: 'We did not begin with a factory. We began with a manual production site, doing the work by hand. It is slow, and it does not scale, but it taught us how the product is really made and what it really costs. When we talk to partners about automated manufacturing, we are describing a process we have already run ourselves, not one we have only imagined.',
+        text: 'We work in two ways. We produce bags at our own manual production site, and we import bags to meet demand our hands alone cannot. Manual production is slow and does not scale, but it has taught us how the product is really made and what it really costs. Importing keeps customers supplied in the meantime. Both are steps towards the same goal: automated manufacturing here at home.',
       },
       { type: 'h2', text: 'The hardest question is: why buy?' },
       {
@@ -43,10 +43,15 @@ export const writtenArticles: WrittenArticle[] = [
         type: 'p',
         text: 'The second is by far the most difficult. Policy moves at its own pace, and a young company has to be patient, persistent and well prepared every time it has the chance to be heard. But without it, every business in this space is selling against the convenience of plastic on its own.',
       },
+      { type: 'h2', text: 'Why we cannot give up' },
+      {
+        type: 'p',
+        text: 'There are days when it would be easier to stop. But the plastic does not stop. It ends up in drains, on streets and along the Nile, and someone has to build the alternative before the rules finally require one. If we give up now, the switch will simply arrive later, with less local capacity ready to meet it.',
+      },
       { type: 'h2', text: 'See where the waste goes' },
       {
         type: 'p',
-        text: 'From time to time, Nile Green joins clean-up campaigns with Save the Nile. Standing next to filled refuse sacks is a different experience from reading about plastic pollution in a report. It is a reminder of why the slow work of persuasion matters: the problem is physical, local and visible, and it does not wait for policy to catch up.',
+        text: 'From time to time, Nile Green joins clean-up campaigns with Save the Nile. Standing next to filled refuse sacks is a different experience from reading about plastic pollution in a report. It is a reminder of why the slow work matters: the problem is physical, local and visible, and it does not wait for policy to catch up.',
       },
       { type: 'h2', text: 'Recognition is a responsibility' },
       {
