@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { PageIntro } from '@/components/PageIntro'
 import { Gallery } from '@/components/Gallery'
 import { Placeholder } from '@/components/Placeholder'
-import { rentalCatalogue, reposDeck, salesCatalogue } from '@/content/samples'
+import { cardConcepts, rentalCatalogue, reposDeck, salesCatalogue } from '@/content/samples'
 import { portfolioCategories } from '@/collections/PortfolioItems'
 import { getPortfolioItems, isSafeLink } from '@/lib/cms'
 import type { PortfolioItem } from '@/payload-types'
@@ -78,6 +78,22 @@ export default async function PortfolioPage() {
               </div>
               <Image className={s.entryImage} src="/work/dmr-business-card.jpg" alt="DMR business card in brushed silver beside a phone showing Daniel's digital card" width={1600} height={1000} sizes="(max-width: 800px) 100vw, 45vw" />
             </article>
+          ) : null}
+
+          {category === 'Brand Identity' ? (
+            <>
+              <article className={`${s.entry} ${s.galleryBlock}`}>
+                <div>
+                  <h3>Business card concepts</h3>
+                  <p className={s.status}>Concept samples for fictional brands</p>
+                </div>
+                <p>
+                  Examples of the card formats I design: smart NFC cards with a digital profile, premium finishes, classic
+                  printed cards and vertical layouts. The brands and people shown are invented.
+                </p>
+              </article>
+              <Gallery items={cardConcepts} />
+            </>
           ) : null}
 
           {category === 'Publications and Catalogues' ? (
