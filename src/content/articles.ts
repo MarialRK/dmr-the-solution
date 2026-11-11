@@ -13,54 +13,62 @@ export const writtenArticles: WrittenArticle[] = [
     slug: 'what-a-paper-bag-taught-me',
     title: 'What a paper bag taught me about building in South Sudan',
     summary:
-      'Replacing single-use plastic in South Sudan has been anything but easy. Here is what makes it hard, and why we are not giving up.',
+      'Replacing single-use plastic in South Sudan has been hard. Not because the bags are hard to make, but because almost nothing yet requires anyone to switch.',
     publishedOn: '2026-11-11T00:00:00.000Z',
     body: [
       {
         type: 'p',
-        text: 'When I started Nile Green Packaging in Juba in January 2025, the idea fitted in one sentence: replace single-use plastic bags with biodegradable paper ones. Making that idea work in South Sudan has been anything but easy. The environment we work in tests a young company at every step, and the hardest part has not been the bags themselves. It has been getting people to see why they should buy them.',
-      },
-      { type: 'h2', text: 'Making and sourcing' },
-      {
-        type: 'p',
-        text: 'We work in two ways. We produce bags at our own manual production site, and we import bags to meet demand our hands alone cannot. Manual production is slow and does not scale, but it has taught us how the product is really made and what it really costs. Importing keeps customers supplied in the meantime. Both are steps towards the same goal: automated manufacturing here at home.',
-      },
-      { type: 'h2', text: 'The hardest question is: why buy?' },
-      {
-        type: 'p',
-        text: 'Plastic bags are cheap and everywhere. For most shops and customers they are simply what bags are, and few people see a reason to change. The government has said it wants single-use plastic phased out completely, and that should make the case for paper obvious. But the phase-out has moved slowly. When enforcement slows, the sense of urgency slows with it, and so does demand for an alternative.',
+        text: 'Nile Green Packaging began as an answer to a need that anyone in Juba can see. Single-use plastic bags are everywhere: in markets, in drains, along roadsides and on the banks of the Nile. The government had also said it wanted single-use plastic phased out. When I founded the company in January 2025, it seemed reasonable to expect that the market would follow the policy, and that businesses would soon need an alternative.',
       },
       {
         type: 'p',
-        text: 'This is the reality for many businesses built around a policy change. You can be ready with a better product, and still be waiting for the market to decide it needs one.',
+        text: 'Almost two years on, I can say plainly that replacing plastic here has been hard. Not because paper bags are difficult to make, but because almost nothing yet requires anyone to switch.',
       },
-      { type: 'h2', text: 'Our work now: building the demand' },
+      { type: 'h2', text: 'How we started' },
       {
         type: 'p',
-        text: 'So most of our effort today goes into two things. The first is marketing: showing businesses and their customers why paper is worth choosing even before anyone is required to choose it. The second is engaging the government, so that the commitment to phase out plastic becomes something businesses can plan around.',
+        text: 'We did not start with a factory. We started by importing paper bags against the orders our first customers placed, so that we only brought in what someone had already committed to buy. Later we added our own manual production, doing the work by hand at our site in Juba. Today we still do both: we import to meet orders, and we produce some bags ourselves. Both are steps towards automated manufacturing at home, which is where the business has to go if it is to be sustainable.',
+      },
+      { type: 'h2', text: 'Why it has been so hard' },
+      {
+        type: 'p',
+        text: 'The plan to phase out single-use plastic has not yet been backed by consistent enforcement. In practice, plastic bags remain cheap, easy to find and used everywhere, and there is little pressure on any business to stop using them.',
       },
       {
         type: 'p',
-        text: 'The second is by far the most difficult. Policy moves at its own pace, and a young company has to be patient, persistent and well prepared every time it has the chance to be heard. But without it, every business in this space is selling against the convenience of plastic on its own.',
+        text: 'That changes everything for a company like ours. A paper bag costs more than a plastic one. Without enforcement, we are asking a shop or a hotel to pay more, voluntarily, for something nobody requires of them. Most will not, and it is hard to blame them. Every sale has to be won on conviction, not on obligation.',
+      },
+      { type: 'h2', text: 'Who buys today' },
+      {
+        type: 'p',
+        text: 'Our customers so far fall into two groups. The first are businesses that already felt the need themselves: they saw the plastic problem and wanted to be part of the answer before anyone asked them to. The second are businesses we have convinced to think about their ESG responsibilities, their environmental and social impact and how their customers and partners see them. For them, choosing paper is part of showing they take that responsibility seriously.',
+      },
+      {
+        type: 'p',
+        text: 'Both groups matter, and we are grateful to them. But neither grows quickly. Each new customer is won one conversation at a time.',
+      },
+      { type: 'h2', text: 'Our work now' },
+      {
+        type: 'p',
+        text: 'So most of our effort goes into two things. The first is marketing: helping businesses see why paper is worth choosing now, before anyone is required to choose it. The second is engaging the government, so that the commitment to phase out plastic becomes something businesses can actually plan around.',
+      },
+      {
+        type: 'p',
+        text: 'The second is by far the most difficult. Policy moves at its own pace, and a young company has to be patient, persistent and well prepared every time it has the chance to be heard. But until implementation moves forward, every business offering an alternative is competing on its own against the convenience of plastic.',
       },
       { type: 'h2', text: 'Why we cannot give up' },
       {
         type: 'p',
-        text: 'There are days when it would be easier to stop. But the plastic does not stop. It ends up in drains, on streets and along the Nile, and someone has to build the alternative before the rules finally require one. If we give up now, the switch will simply arrive later, with less local capacity ready to meet it.',
-      },
-      { type: 'h2', text: 'See where the waste goes' },
-      {
-        type: 'p',
-        text: 'From time to time, Nile Green joins clean-up campaigns with Save the Nile. Standing next to filled refuse sacks is a different experience from reading about plastic pollution in a report. It is a reminder of why the slow work matters: the problem is physical, local and visible, and it does not wait for policy to catch up.',
+        text: 'There are days when it would be easier to stop. But the plastic does not stop. From time to time, Nile Green joins clean-up campaigns with Save the Nile, and standing next to filled refuse sacks is a different experience from reading about pollution in a report. The problem is physical, local and visible, and it does not wait for policy to catch up. If we give up now, the switch will still come one day, but with less local capacity ready to meet it.',
       },
       { type: 'h2', text: 'Recognition is a responsibility' },
       {
         type: 'p',
-        text: 'In December 2025, Nile Green Packaging won ALU Ventures Lab Demo Day, with a US$30,000 prize. It was an important moment for the team, and it gave us the means to keep going. But a prize is not a market. The real test is whether the business can stand on its own, which is why we are working towards automated manufacturing while we build the demand to support it.',
+        text: 'In December 2025, Nile Green Packaging won ALU Ventures Lab Demo Day, with a US$30,000 prize. It was an important moment for the team, and it gave us the means to keep going. But a prize is not a market. The real test is whether the business can stand on its own.',
       },
       {
         type: 'p',
-        text: 'If there is one lesson I would share with anyone building a business around change, it is this: a good product is not enough. You also have to help build the demand, and sometimes the rules, that it depends on. That part is slower and harder, and it is where the business is really made.',
+        text: 'If there is one lesson I would share with anyone building a business around change, it is this: a good product is not enough. You also have to build the demand, and sometimes push for the rules, that it depends on. That part is slower and harder, and it is where the business is really made.',
       },
     ],
   },

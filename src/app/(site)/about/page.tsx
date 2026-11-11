@@ -28,8 +28,9 @@ export default function AboutPage() {
           </p>
           <h2>Building a company around a plastic problem</h2>
           <p>
-            Nile Green Packaging makes biodegradable paper packaging to replace single-use plastic. It began
-            with pilot production and is now moving towards automated manufacturing. In 2025 it won ALU
+            Nile Green Packaging makes biodegradable paper packaging to replace single-use plastic. It began by importing
+            bags to fill customer orders, added its own manual production, and is now working towards automated
+            manufacturing. In 2025 it won ALU
             Ventures Lab Demo Day, with a US$30,000 prize.
           </p>
           <figure className={s.figure}>
