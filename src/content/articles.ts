@@ -13,36 +13,49 @@ export const writtenArticles: WrittenArticle[] = [
     slug: 'what-a-paper-bag-taught-me',
     title: 'What a paper bag taught me about building in South Sudan',
     summary:
-      'Nile Green Packaging started with a simple idea: replace single-use plastic bags with paper. Making that idea work has been anything but simple.',
+      'Making biodegradable bags turned out to be the easier part. The harder work is convincing a market, and a government, that the switch from plastic matters now.',
     publishedOn: '2026-11-11T00:00:00.000Z',
     body: [
       {
         type: 'p',
-        text: 'When I started Nile Green Packaging in Juba in January 2025, the idea fitted in one sentence: make biodegradable paper bags to replace single-use plastic. Almost everyone I explained it to agreed it was a good idea. Very few of them could tell me how it would pay for itself. That gap between agreement and action is where most of the real work has been.',
+        text: 'When I started Nile Green Packaging in Juba in January 2025, the idea fitted in one sentence: make biodegradable paper bags to replace single-use plastic. I assumed the hardest part would be production. It turned out to be something else entirely: getting people to see why they should buy them.',
       },
       { type: 'h2', text: 'Start with your hands' },
       {
         type: 'p',
-        text: 'We did not begin with a factory. We began with a manual production site, stacks of paper and a small team folding, gluing and checking bags by hand. It is slow, and it does not scale. But it taught us things no plan could: which sizes customers actually want, how the bags hold up in use, and how much time each step really takes. When we talk to investors and partners about automated manufacturing now, we are describing a process we have already run ourselves, not one we have only imagined.',
+        text: 'We did not begin with a factory. We began with a manual production site, doing the work by hand. It is slow, and it does not scale, but it taught us how the product is really made and what it really costs. When we talk to partners about automated manufacturing, we are describing a process we have already run ourselves, not one we have only imagined.',
       },
-      { type: 'h2', text: 'Paper cannot win on price alone' },
+      { type: 'h2', text: 'The hardest question is: why buy?' },
       {
         type: 'p',
-        text: 'Plastic bags are cheap, light and everywhere. A paper bag will struggle to beat them on cost, especially at small volumes. So we have had to compete on other things: reliability of supply, presentation, and what using a paper bag says about the business that hands it over. For a shop or a hotel, the bag is the last thing a customer holds before leaving. That moment is worth something, and our job is to make it worth more than the difference in price.',
+        text: 'Plastic bags are cheap and everywhere. For most shops and customers they are simply what bags are, and few people see a reason to change. The government has said it wants single-use plastic phased out completely, and that should make the case for paper obvious. But the phase-out has moved slowly. When enforcement slows, the sense of urgency slows with it, and so does demand for an alternative.',
+      },
+      {
+        type: 'p',
+        text: 'This is the reality for many businesses built around a policy change. You can be ready with a better product, and still be waiting for the market to decide it needs one.',
+      },
+      { type: 'h2', text: 'Our work now: building the demand' },
+      {
+        type: 'p',
+        text: 'So most of our effort today goes into two things. The first is marketing: showing businesses and their customers why paper is worth choosing even before anyone is required to choose it. The second is engaging the government, so that the commitment to phase out plastic becomes something businesses can plan around.',
+      },
+      {
+        type: 'p',
+        text: 'The second is by far the most difficult. Policy moves at its own pace, and a young company has to be patient, persistent and well prepared every time it has the chance to be heard. But without it, every business in this space is selling against the convenience of plastic on its own.',
       },
       { type: 'h2', text: 'See where the waste goes' },
       {
         type: 'p',
-        text: 'From time to time, Nile Green joins clean-up campaigns with Save the Nile. Standing next to filled refuse sacks is a different experience from reading about plastic pollution in a report. It is a reminder that the problem we are working on is physical, local and visible, and that a better product only matters if it actually replaces what ends up on the ground.',
+        text: 'From time to time, Nile Green joins clean-up campaigns with Save the Nile. Standing next to filled refuse sacks is a different experience from reading about plastic pollution in a report. It is a reminder of why the slow work of persuasion matters: the problem is physical, local and visible, and it does not wait for policy to catch up.',
       },
       { type: 'h2', text: 'Recognition is a responsibility' },
       {
         type: 'p',
-        text: 'In December 2025, Nile Green Packaging won ALU Ventures Lab Demo Day, with a US$30,000 prize. It was an important moment for the team, and it gave us the means to keep going. But a prize is not a market. The real test is whether the business can stand on its own, which is why our focus now is the move from pilot production to automated manufacturing.',
+        text: 'In December 2025, Nile Green Packaging won ALU Ventures Lab Demo Day, with a US$30,000 prize. It was an important moment for the team, and it gave us the means to keep going. But a prize is not a market. The real test is whether the business can stand on its own, which is why we are working towards automated manufacturing while we build the demand to support it.',
       },
       {
         type: 'p',
-        text: 'If there is one lesson I would share with anyone starting a business close to home, it is this: keep the idea simple, and expect the work to be complicated. The simplicity is what lets people believe in it. The complication is where the business is actually built.',
+        text: 'If there is one lesson I would share with anyone building a business around change, it is this: a good product is not enough. You also have to help build the demand, and sometimes the rules, that it depends on. That part is slower and harder, and it is where the business is really made.',
       },
     ],
   },
