@@ -1,0 +1,113 @@
+.kicker {
+  margin: 0 0 18px;
+  font-family: var(--text);
+  font-size: 1rem !important;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--graphite);
+}
+
+.initials {
+  margin: 0 0 36px !important;
+  font-family: var(--display);
+  font-size: clamp(2.2rem, 4.4vw, 4rem);
+  line-height: 1.05;
+  color: var(--graphite);
+}
+
+.initials span {
+  color: var(--black);
+}
+
+.sectionTitle {
+  margin-bottom: clamp(36px, 5vw, 64px);
+}
+
+.beliefs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(36px, 5vw, 72px) clamp(32px, 6vw, 96px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.beliefs li {
+  padding-top: 22px;
+  border-top: 1px solid var(--graphite);
+}
+
+.index {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--silver);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.beliefs h3 {
+  margin: 0 0 14px;
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  line-height: 1.15;
+}
+
+.beliefs p {
+  margin: 0;
+  max-width: 32em;
+  color: var(--mist);
+}
+
+.proof {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 56px);
+  margin-top: clamp(48px, 6vw, 88px);
+}
+
+.proof > div {
+  padding-top: 22px;
+  border-top: 1px solid var(--black);
+}
+
+.proof p {
+  margin: 0 0 18px;
+}
+
+.label {
+  margin: 0 0 6px !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--graphite);
+}
+
+.problem {
+  font-family: var(--display);
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+
+.university {
+  margin-top: 36px;
+  padding-top: 22px;
+  border-top: 1px solid var(--black);
+}
+
+.university h3 {
+  margin: 0 0 10px;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.1;
+}
+
+.university p {
+  margin: 0 0 8px;
+}
+
+@media (max-width: 800px) {
+  .beliefs,
+  .proof {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

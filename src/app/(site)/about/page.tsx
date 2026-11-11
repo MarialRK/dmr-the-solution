@@ -1,40 +1,48 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { MediaList } from '@/components/MediaList'
 import { PageIntro } from '@/components/PageIntro'
 import { getAboutPage } from '@/lib/cms'
 import s from '@/components/Inner.module.css'
+import a from './about.module.css'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Daniel Marial Reng Kudum is a South Sudanese entrepreneur and software engineer, and the founder of Nile Green Group.',
+  description:
+    'Daniel Marial Reng Kudum is a South Sudanese entrepreneur and software engineer, founder of Nile Green Group, and the person behind DMR — The Solution.',
 }
 
-const expertise = [
+const beliefs = [
   {
-    area: 'Software engineering',
-    shown: 'A bachelor’s degree in Computer Software Engineering from African Leadership University, SuddSight, and a year as a Software Engineering Intern at Trinity Technologies.',
+    title: 'An idea is only worth something once it works.',
+    text: 'Plans, concepts and good intentions matter, but the test is whether something real exists at the end: a product, a system, a document someone can act on.',
   },
   {
-    area: 'Technology and digital solutions',
-    shown: 'GreenSphere and NG-Collect, the in-house products being built at Nile Green Packaging, and the public dashboard behind SuddSight.',
+    title: 'Disciplined work outlasts grand declarations.',
+    text: 'Lasting change rarely comes from big announcements. It comes from showing up, doing the next piece properly, and doing it again.',
   },
   {
-    area: 'Entrepreneurship and business management',
-    shown: 'Founding Nile Green Group and Nile Green Packaging, and running the company from importation to its own production. Executive Diploma in Business Management and Administration.',
+    title: 'People should understand the solutions made for them.',
+    text: 'A tool nobody can question is a tool nobody can trust. I would rather build something slightly simpler that people understand and use.',
   },
   {
-    area: 'Creative design and communication',
-    shown: 'The logos for DMR, Nile Green Group, Nile Green Packaging and Nile Vertex Properties, the Nile Vertex catalogues and the REPOS masterclass presentation. Professional Diploma in Public Relations.',
+    title: 'A good product is not enough on its own.',
+    text: 'You also have to build the demand, the trust and sometimes the rules it depends on. That slower work is where most things are really made.',
+  },
+]
+
+const proof = [
+  {
+    problem: 'Single-use plastic in Juba’s markets, drains and rivers.',
+    answer: 'I founded Nile Green Packaging to replace it with paper, first by importing to order, then by producing our own.',
   },
   {
-    area: 'Environmental innovation',
-    shown: 'Building a company to replace single-use plastic, clean-up campaigns with Save the Nile, and the Carbon and ESG Analysis programme with University of Cambridge Online.',
+    problem: 'Floods in the Sudd that arrive with little useful warning.',
+    answer: 'I built SuddSight, which estimates flood risk by county and shows why it reached each estimate.',
   },
   {
-    area: 'Strategy and pitching',
-    shown: 'Winning ALU Ventures Lab Demo Day with Nile Green Packaging, and Design-Led Strategy with the University of Sydney Business School.',
+    problem: 'Good businesses that look smaller than they are.',
+    answer: 'I designed the identities for DMR, Nile Green Group, Nile Green Packaging and Nile Vertex Properties.',
   },
 ]
 
@@ -42,118 +50,130 @@ export default async function AboutPage() {
   const about = await getAboutPage()
   return (
     <>
-      <PageIntro title={about.headline || 'Steady work, in service of the places I come from.'} />
+      <PageIntro title={about.headline || 'Daniel Marial Reng Kudum'} intro="Entrepreneur, software engineer and founder of Nile Green Group." />
+
       <section className={`${s.section} ${s.first} ${s.split}`}>
         <div className={s.photo}>
-          <Image src="/images/flags-hall.jpg" alt="Daniel standing beside the flag of South Sudan in a hall of national flags" width={720} height={1280} sizes="(max-width: 800px) 100vw, 42vw" priority />
+          <Image
+            src="/images/flags-hall.jpg"
+            alt="Daniel standing beside the flag of South Sudan in a hall of national flags"
+            width={720}
+            height={1280}
+            sizes="(max-width: 800px) 100vw, 42vw"
+            priority
+          />
         </div>
         <div className={s.prose}>
+          <h2 className={a.kicker}>The name</h2>
+          <p className={a.initials} aria-hidden="true">
+            <span>D</span>aniel <span>M</span>arial <span>R</span>eng
+          </p>
           {about.paragraphs.length ? (
             about.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
           ) : (
             <>
-          <p>
-            I am a South Sudanese entrepreneur and software engineer. I work across business, technology,
-            design and sustainability, because the problems I care about rarely stay inside one discipline.
-          </p>
-          <p>
-            I founded Nile Green Group, a Kigali-based holding company that owns and invests in businesses
-            including Nile Green Packaging in Juba and Nile Vertex Properties in Kigali. I want these
-            businesses to create real economic value while contributing to sustainable development and jobs.
-          </p>
+              <p>
+                DMR are the initials of my first three names, Daniel Marial Reng. It is the name I work under, so
+                everything that carries it carries my name too.
+              </p>
+              <p>
+                I am South Sudanese. I work across business, technology, design and sustainability, because the
+                problems I care about rarely stay inside one discipline. I founded Nile Green Group, a Kigali-based
+                holding company whose businesses include Nile Green Packaging in Juba and Nile Vertex Properties in
+                Kigali.
+              </p>
+              <p>English and Arabic are my working languages, and Dinka is my first language.</p>
             </>
           )}
-          <h2>Building a company around a plastic problem</h2>
-          <p>
-            Nile Green Packaging makes biodegradable paper packaging to replace single-use plastic. It began by importing
-            bags to fill customer orders, added its own manual production, and is now working towards automated
-            manufacturing. In December 2025 it won ALU
-            Ventures Lab Demo Day, with a US$30,000 prize.
-          </p>
-          <figure className={s.figure}>
-            <Image src="/images/production-site.jpg" alt="Daniel sorting stacks of paper bags at Nile Green Packaging" width={1280} height={718} sizes="(max-width: 800px) 100vw, 50vw" />
-            <figcaption>At our manual production site.</figcaption>
-          </figure>
-          <h2>Using software on problems close to home</h2>
-          <p>
-            SuddSight, my software engineering capstone, applies machine learning and satellite data to flood
-            risk in South Sudan’s Sudd Wetland. I dedicated the work to communities in Bor South, Twic East, Duk,
-            Fangak, Panyijiar, Mayendit, Leer, Baliet, Panyikang and Malakal, whose repeated exposure to
-            flooding shaped its design.
-          </p>
-          <p>
-            Before that, I spent a year as a Software Engineering Intern at Trinity Technologies in Juba,
-            working with a team on web and mobile applications.
-          </p>
         </div>
       </section>
+
       <section className={`${s.section} ${s.dark}`}>
-        <p className={s.quote}>Lasting change comes less from grand declarations than from disciplined work.</p>
-      </section>
-      <section className={s.section} id="expertise">
-        <h2 className={s.heading}>Expertise</h2>
-        {expertise.map((item) => (
-          <article className={s.entry} key={item.area}>
-            <h3>{item.area}</h3>
-            <div>
-              <p className={s.status}>Shown through</p>
-              <p>{item.shown}</p>
-            </div>
-          </article>
-        ))}
-        <p className={s.path}>
-          Beyond my work, I follow public affairs, governance, economic development, leadership and culture closely.
-        </p>
-      </section>
-      <section className={`${s.section} ${s.alt} ${s.split}`}>
-        <h2>Milestones</h2>
-        <ol className={s.timeline}>
-          <li><span>2023</span><p>Began studying software engineering at African Leadership University as a Mastercard Foundation Scholar.</p></li>
-          <li><span>2024</span><p>Named a Millennium Fellow, and began a year as a Software Engineering Intern at Trinity Technologies.</p></li>
-          <li><span>January 2025</span><p>Founded Nile Green Packaging in Juba.</p></li>
-          <li><span>December 2025</span><p>Won ALU Ventures Lab Demo Day with Nile Green Packaging.</p></li>
-          <li><span>June 2026</span><p>Completed the Carbon and ESG Analysis programme with University of Cambridge Online.</p></li>
-          <li><span>July 2026</span><p>Defended SuddSight, my flood-risk prediction capstone.</p></li>
+        <h2 className={a.sectionTitle}>What I believe</h2>
+        <ol className={a.beliefs}>
+          {beliefs.map((belief, index) => (
+            <li key={belief.title}>
+              <span className={a.index}>{String(index + 1).padStart(2, '0')}</span>
+              <h3>{belief.title}</h3>
+              <p>{belief.text}</p>
+            </li>
+          ))}
         </ol>
       </section>
-      <section className={s.section} id="media">
-        <h2 className={s.heading}>In the media</h2>
-        <MediaList />
-        <p className={s.path}>For interviews, speaking or press enquiries, please get in touch.</p>
-        <Link className={s.button} href="/contact">
-          Contact me
-        </Link>
-      </section>
-      <section className={`${s.section} ${s.alt} ${s.split}`}>
-        <div className={s.prose}>
-          <h2>Leadership, community and life outside work</h2>
-          <p>
-            Through Nile Green Packaging, I take part in clean-up campaigns from time to time, working in collaboration
-            with Save the Nile. For a company built around reducing plastic waste, it keeps us close to where that waste
-            actually ends up.
-          </p>
+
+      <section className={s.section}>
+        <div className={s.split}>
+          <h2>Why “The Solution”</h2>
+          <div className={s.prose}>
+            <p>
+              Not because I claim to have every answer. I don’t. I chose the name because of how I work: I start with
+              a problem that is real and specific, and I stay with it until something exists that addresses it.
+            </p>
+            <p>
+              That is also the promise I make to the people I work with. You bring the problem. We agree, in writing,
+              what will solve it. Then I deliver that, and I tell you plainly when something falls outside what I can
+              do well.
+            </p>
+          </div>
         </div>
-        <figure className={s.figure}>
-          <Image src="/images/cleanup-team.jpg" alt="Daniel in a high-visibility vest holding a paper bag beside volunteers and filled refuse sacks, with a news camera filming" width={1080} height={810} sizes="(max-width: 800px) 100vw, 50vw" />
-          <figcaption>On a clean-up campaign with Save the Nile.</figcaption>
-        </figure>
-      </section>
-      <section className={`${s.section} ${s.split}`} id="credentials">
-        <div className={s.prose}>
-          <h2>Education, awards and certifications</h2>
-          <p>English and Arabic are my working languages, and Dinka is my first language.</p>
-        </div>
-        <div className={s.photo} style={{ maxWidth: 380 }}>
-          <Image src="/images/alu-portrait.jpg" alt="Daniel in a dark suit holding a document folder at African Leadership University" width={850} height={1279} sizes="380px" />
+        <div className={a.proof}>
+          {proof.map((item) => (
+            <div key={item.problem}>
+              <p className={a.label}>The problem</p>
+              <p className={a.problem}>{item.problem}</p>
+              <p className={a.label}>What I did</p>
+              <p>{item.answer}</p>
+            </div>
+          ))}
         </div>
       </section>
-      <section className={`${s.section} ${s.first}`}>
-        <div className={s.credentials}>
+
+      <section className={`${s.section} ${s.alt}`} id="education">
+        <div className={s.split}>
           <div>
-            <h3>Education</h3>
+            <h2>Universities</h2>
+            <div className={a.university}>
+              <p className={a.label}>Degree</p>
+              <h3>African Leadership University</h3>
+              <p>Bachelor’s degree in Computer Software Engineering, 2023–2026</p>
+              <p className={s.status}>Studied as a Mastercard Foundation Scholar. Capstone: SuddSight.</p>
+            </div>
+          </div>
+          <div className={s.photo}>
+            <Image
+              src="/images/alu-portrait.jpg"
+              alt="Daniel in a dark suit holding a document folder at African Leadership University"
+              width={850}
+              height={1279}
+              sizes="(max-width: 800px) 100vw, 40vw"
+            />
+          </div>
+        </div>
+        <div className={s.credentials} style={{ marginTop: 'clamp(48px, 6vw, 90px)' }}>
+          <div>
+            <h3>Further study with universities</h3>
             <dl>
-              <dt>Bachelor’s degree, Computer Software Engineering</dt>
-              <dd>African Leadership University, 2023–2026</dd>
+              <dt>Carbon and ESG Analysis</dt>
+              <dd>University of Cambridge Online, 2026</dd>
+              <dt>Design-Led Strategy</dt>
+              <dd>University of Sydney Business School</dd>
+              <dt>Global Financial Markets and Instruments</dt>
+              <dd>Rice University</dd>
+              <dt>Applied Unsupervised Learning in Python</dt>
+              <dd>University of Michigan</dd>
+            </dl>
+          </div>
+          <div>
+            <h3>Professional diplomas and certificates</h3>
+            <dl>
+              <dt>Executive Diploma in Business Management and Administration</dt>
+              <dd>UCT</dd>
+              <dt>Professional Diploma in Public Relations and PR Management</dt>
+              <dd>UCT</dd>
+              <dt>Neural Networks and Deep Learning</dt>
+              <dd>DeepLearning.AI</dd>
+              <dt>100 Days of Code: Python Pro Bootcamp</dt>
+              <dd>Completed</dd>
             </dl>
           </div>
           <div>
@@ -167,27 +187,15 @@ export default async function AboutPage() {
               <dd>Class of 2024</dd>
             </dl>
           </div>
-          <div>
-            <h3>Certifications</h3>
-            <dl>
-              <dt>Carbon and ESG Analysis</dt>
-              <dd>University of Cambridge Online, 2026</dd>
-              <dt>Executive Diploma in Business Management and Administration</dt>
-              <dd>UCT</dd>
-              <dt>Professional Diploma in Public Relations and PR Management</dt>
-              <dd>UCT</dd>
-              <dt>Design-Led Strategy</dt>
-              <dd>University of Sydney Business School</dd>
-              <dt>Global Financial Markets and Instruments</dt>
-              <dd>Rice University</dd>
-              <dt>Neural Networks and Deep Learning</dt>
-              <dd>DeepLearning.AI</dd>
-              <dt>Applied Unsupervised Learning in Python</dt>
-              <dd>University of Michigan</dd>
-              <dt>100 Days of Code: Python Pro Bootcamp</dt>
-              <dd>Completed</dd>
-            </dl>
-          </div>
+        </div>
+      </section>
+
+      <section className={`${s.section} ${s.dark}`}>
+        <h2>Have a problem worth solving?</h2>
+        <div className={s.links}>
+          <Link className={`${s.button} ${s.light}`} href="/services">
+            See what I offer
+          </Link>
         </div>
       </section>
     </>
