@@ -43,12 +43,14 @@ export const services: Service[] = [
     examples: [
       'Logos for DMR, Nile Green Group, Nile Green Packaging and Nile Vertex Properties',
       'Nile Vertex sales and rental property catalogues',
+      'DMR business card and matching digital card',
     ],
     visuals: [
       { src: '/logos/dmr-logo-black.svg', alt: 'DMR The Solution logo', width: 3766, height: 1112, caption: 'DMR — The Solution' },
       { src: '/logos/nile-green-group.jpg', alt: 'Nile Green Group logo', width: 1080, height: 590, caption: 'Nile Green Group' },
       { src: '/logos/nile-green-packaging.jpg', alt: 'Nile Green Packaging logo', width: 1024, height: 1024, caption: 'Nile Green Packaging' },
       { src: '/logos/nile-vertex-properties.jpg', alt: 'Nile Vertex Properties logo', width: 906, height: 1080, caption: 'Nile Vertex Properties' },
+      { src: '/work/dmr-business-card.jpg', alt: 'DMR business card beside a phone showing the matching digital card', width: 1600, height: 1000, caption: 'DMR business card and digital card' },
       { src: '/work/nvp-sales-cover.jpg', alt: 'Cover of the Kigali Property Sales and Investment Collection catalogue', width: 906, height: 1280, caption: 'Nile Vertex sales catalogue cover' },
       { src: '/work/nvp-property-kibagabaga.jpg', alt: 'Catalogue property page for a villa in Kibagabaga', width: 890, height: 1280, caption: 'Nile Vertex catalogue property page' },
     ],

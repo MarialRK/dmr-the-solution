@@ -65,6 +65,21 @@ export default async function PortfolioPage() {
             </div>
           ) : null}
 
+          {category === 'Brand Identity' ? (
+            <article className={`${s.entry} ${s.galleryBlock}`}>
+              <div>
+                <h3>DMR business card and digital card</h3>
+                <p className={s.status}>Brand identity for DMR — The Solution</p>
+                <p>A brushed-silver business card with a QR code that opens a matching digital card on the phone.</p>
+                <dl>
+                  <dt>My contribution</dt>
+                  <dd>Designed both the printed card and the digital card.</dd>
+                </dl>
+              </div>
+              <Image className={s.entryImage} src="/work/dmr-business-card.jpg" alt="DMR business card in brushed silver beside a phone showing Daniel's digital card" width={1600} height={1000} sizes="(max-width: 800px) 100vw, 45vw" />
+            </article>
+          ) : null}
+
           {category === 'Publications and Catalogues' ? (
             <>
               <article className={s.entry}>
