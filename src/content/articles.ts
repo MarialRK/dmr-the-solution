@@ -27,7 +27,15 @@ export const writtenArticles: WrittenArticle[] = [
       { type: 'h2', text: 'How we started' },
       {
         type: 'p',
-        text: 'We did not start with a factory. We started by importing paper bags against the orders our first customers placed, so that we only brought in what someone had already committed to buy. Later we added our own manual production, doing the work by hand at our site in Juba. Today we still do both: we import to meet orders, and we produce some bags ourselves. Both are steps towards automated manufacturing at home, which is where the business has to go if it is to be sustainable.',
+        text: 'We did not start with a factory. We started with importation. When our first customers placed orders, we imported paper bags to fill them, so we only brought in what someone had already committed to buy.',
+      },
+      {
+        type: 'p',
+        text: 'Only after that did we move into manual production, making bags by hand at our own site in Juba. Today we still do both: we import to meet orders, and we produce some bags ourselves.',
+      },
+      {
+        type: 'p',
+        text: 'The next step is automated manufacturing. With the support of the ALU Ventures Lab grant, we are doing everything we can to make that transition, and we have already organised the facility it needs. Producing at scale, here at home, is where the business has to go if it is to last.',
       },
       { type: 'h2', text: 'Why it has been so hard' },
       {
@@ -64,7 +72,7 @@ export const writtenArticles: WrittenArticle[] = [
       { type: 'h2', text: 'Recognition is a responsibility' },
       {
         type: 'p',
-        text: 'In December 2025, Nile Green Packaging won ALU Ventures Lab Demo Day, with a US$30,000 prize. It was an important moment for the team, and it gave us the means to keep going. But a prize is not a market. The real test is whether the business can stand on its own.',
+        text: 'In December 2025, Nile Green Packaging won ALU Ventures Lab Demo Day, with a US$30,000 prize. It was an important moment for the team, and that grant is now going into our move to automated manufacturing. But a prize is not a market. How quickly an automated line can grow will depend a great deal on when the law on single-use plastic actually comes into effect. Enforcement is what will turn a responsible choice into a normal one.',
       },
       {
         type: 'p',
