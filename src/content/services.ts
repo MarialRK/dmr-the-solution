@@ -35,6 +35,7 @@ export const services: Service[] = [
       'Corporate and business branding',
       'Brand guidelines',
       'Business cards and stationery',
+      'Digital business cards with QR codes',
       'Marketing and promotional materials',
       'Digital graphics',
       'Visual communication',
