@@ -15,6 +15,7 @@ export type Service = {
   limits?: string[]
   examples?: string[]
   visuals?: { src: string; alt: string; width: number; height: number; caption: string }[]
+  visualsNote?: string
 }
 
 export const groups = ['Creative and communication', 'Digital and technology', 'Business and advisory']
@@ -61,48 +62,49 @@ export const services: Service[] = [
     group: groups[0],
     availability: 'Available now',
     action: 'Request a quote',
-    summary: 'Every kind of business card, from classic print to smart NFC cards and digital profiles.',
+    summary: 'Cards people keep, in every format: printed, premium, smart and digital.',
     description:
-      'I design business cards in every format: printed, premium, smart and digital. Each one is built around your brand and the way you actually meet people.',
-    problem: 'Cards that look like everyone else’s, run out at the wrong moment, or go out of date as soon as your details change.',
+      'Your card is often the one thing people take away from meeting you. I design cards that feel like your brand the moment they are in someone’s hand, and digital versions that keep working long after the meeting.',
+    problem:
+      'Most cards are glanced at and forgotten. Some run out just before an important event, and others are out of date the day your number or role changes. A well-designed card, backed by a digital profile you can update at any time, solves all three.',
+    audience:
+      'Professionals, founders and executives, and companies that want every member of the team to carry the same, consistent card.',
     scope: [
-      'Classic printed cards, one or two-sided',
-      'Premium finishes: foil, embossing and letterpress',
+      'Classic printed cards, single or double-sided',
+      'Premium finishes: gold or silver foil, embossing and letterpress',
       'Metal and matte black cards',
       'Frosted and transparent cards',
       'Recycled and kraft paper cards',
       'Square, mini and vertical formats',
-      'Smart NFC cards that share your details with a tap',
-      'QR code cards linked to a digital profile',
-      'Digital business card pages',
+      'Smart NFC cards that share your details with a single tap',
+      'QR code cards that open your digital profile',
+      'Digital business card pages with call, WhatsApp, email and save-contact buttons',
       'Phone wallet passes',
       'Matching card sets for teams and companies',
     ],
     process: [
-      'Tell me about your brand, your role and where you hand out cards.',
-      'I propose a format and design concept.',
-      'I design the front, back and any digital profile.',
-      'You review and approve the final design.',
-      'You receive print-ready files, and your digital card goes live where included.',
+      'You tell me about your brand, your role and where you meet people.',
+      'I recommend the format and finish that suit you, and share a first design.',
+      'We refine the front, the back and any digital profile together.',
+      'You approve the final design.',
+      'You receive print-ready files, and your digital card goes live if it is part of your package.',
     ],
-    receives: 'Print-ready design files for every card, and a working digital profile page where it is part of the scope.',
-    limits: [
-      'Printing, special materials and NFC chips are quoted separately.',
-      'The concept samples on this page use invented brands and people.',
-    ],
-    examples: ['My own DMR business card and digital card'],
+    receives:
+      'Print-ready files for every side and format, prepared to your printer’s specifications, and a live digital profile when it is included.',
+    limits: ['Printing, special materials and NFC chips are priced separately, so you only pay for what you choose.'],
+    visualsNote: 'Alongside my own card, the sample designs above show each format. Their brand names are illustrative.',
     visuals: [
       { src: '/work/dmr-business-card.jpg', alt: 'DMR business card beside a phone showing the matching digital card', width: 1600, height: 1000, caption: 'My own DMR card and digital card' },
       { src: '/work/card-concept-dmr-wallet.jpg', alt: 'DMR phone wallet pass and digital profile', width: 1600, height: 1000, caption: 'DMR wallet pass and digital profile' },
-      { src: '/work/card-concept-smart.jpg', alt: 'Concept smart NFC card with a digital profile on a phone', width: 1600, height: 1000, caption: 'Smart NFC card (concept)' },
-      { src: '/work/card-concept-premium.jpg', alt: 'Concept black card with gold foil lettering', width: 1600, height: 1000, caption: 'Premium gold foil card (concept)' },
-      { src: '/work/card-concept-metal.jpg', alt: 'Concept brushed metal and matte black cards', width: 1600, height: 1000, caption: 'Metal card (concept)' },
-      { src: '/work/card-concept-frosted.jpg', alt: 'Concept frosted transparent cards', width: 1600, height: 1000, caption: 'Frosted transparent card (concept)' },
-      { src: '/work/card-concept-letterpress.jpg', alt: 'Concept letterpress card with embossed monogram', width: 1600, height: 1000, caption: 'Letterpress and embossed card (concept)' },
-      { src: '/work/card-concept-recycled.jpg', alt: 'Concept recycled kraft paper cards', width: 1600, height: 1000, caption: 'Recycled kraft card (concept)' },
-      { src: '/work/card-concept-classic.jpg', alt: 'Concept classic two-sided printed card', width: 1600, height: 1000, caption: 'Classic two-sided card (concept)' },
-      { src: '/work/card-concept-vertical.jpg', alt: 'Concept vertical two-sided cards', width: 1600, height: 1000, caption: 'Vertical card (concept)' },
-      { src: '/work/card-concept-square.jpg', alt: 'Concept square mini card set', width: 1600, height: 1000, caption: 'Square mini card set (concept)' },
+      { src: '/work/card-concept-smart.jpg', alt: 'Concept smart NFC card with a digital profile on a phone', width: 1600, height: 1000, caption: 'Smart NFC card (sample design)' },
+      { src: '/work/card-concept-premium.jpg', alt: 'Concept black card with gold foil lettering', width: 1600, height: 1000, caption: 'Premium gold foil card (sample design)' },
+      { src: '/work/card-concept-metal.jpg', alt: 'Concept brushed metal and matte black cards', width: 1600, height: 1000, caption: 'Metal card (sample design)' },
+      { src: '/work/card-concept-frosted.jpg', alt: 'Concept frosted transparent cards', width: 1600, height: 1000, caption: 'Frosted transparent card (sample design)' },
+      { src: '/work/card-concept-letterpress.jpg', alt: 'Concept letterpress card with embossed monogram', width: 1600, height: 1000, caption: 'Letterpress and embossed card (sample design)' },
+      { src: '/work/card-concept-recycled.jpg', alt: 'Concept recycled kraft paper cards', width: 1600, height: 1000, caption: 'Recycled kraft card (sample design)' },
+      { src: '/work/card-concept-classic.jpg', alt: 'Concept classic two-sided printed card', width: 1600, height: 1000, caption: 'Classic two-sided card (sample design)' },
+      { src: '/work/card-concept-vertical.jpg', alt: 'Concept vertical two-sided cards', width: 1600, height: 1000, caption: 'Vertical card (sample design)' },
+      { src: '/work/card-concept-square.jpg', alt: 'Concept square mini card set', width: 1600, height: 1000, caption: 'Square mini card set (sample design)' },
     ],
   },
   {
