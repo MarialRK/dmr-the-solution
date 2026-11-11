@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Ventures } from '@/components/Ventures'
-import { selectedWork, serviceGroups, site } from '@/content/site'
+import { groups, services } from '@/content/services'
+import { selectedWork, site } from '@/content/site'
 import { formatDate, getInsights, getSettings } from '@/lib/cms'
 import styles from './page.module.css'
 
@@ -31,7 +32,7 @@ export default async function HomePage() {
             people and organisations turn their own ideas into work that gets finished.
           </p>
           <div className={styles.actions}>
-            <Link className={styles.primary} href="/work">
+            <Link className={styles.primary} href="/ventures">
               See my work
             </Link>
             <Link className={styles.secondary} href="/contact">
@@ -79,8 +80,8 @@ export default async function HomePage() {
             the Sudd and shows why it reached each result.
           </p>
           <p>
-            Through DMR, I bring the same practical approach to other people’s ideas: brands, websites, social
-            media, video, business documents and advice.
+            Through DMR, I bring the same practical approach to other people’s ideas: brands, websites,
+            presentations, digital communication, software, writing and advice.
           </p>
         </div>
       </section>
@@ -98,8 +99,8 @@ export default async function HomePage() {
             </li>
           ))}
         </ul>
-        <Link className={styles.textLink} href="/work">
-          View all work
+        <Link className={styles.textLink} href="/ventures">
+          View all ventures and projects
         </Link>
       </section>
 
@@ -128,14 +129,13 @@ export default async function HomePage() {
       <section className={styles.services}>
         <h2>What you can bring to me</h2>
         <div className={styles.groups}>
-          {serviceGroups.map((group) => (
-            <div key={group.name}>
-              <h3>{group.name}</h3>
+          {groups.map((group) => (
+            <div key={group}>
+              <h3>{group}</h3>
               <ul>
-                {group.services.filter((service) => !hiddenServices.includes(service.slug)).map((service) => (
+                {services.filter((service) => service.group === group && !hiddenServices.includes(service.slug)).map((service) => (
                   <li key={service.slug}>
                     <Link href={`/services/${service.slug}`}>{service.name}</Link>
-                    {service.note ? <span> ({service.note.toLowerCase()})</span> : null}
                   </li>
                 ))}
               </ul>

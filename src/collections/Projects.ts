@@ -2,7 +2,7 @@ import type { CollectionConfig } from 'payload'
 import { isLoggedIn, publishedOrLoggedIn } from '@/lib/access'
 import { refreshAfterChange, refreshAfterDelete } from '@/lib/revalidate'
 
-const paths = ['/work']
+const paths = ['/ventures']
 
 export const Projects: CollectionConfig = {
   slug: 'projects',
@@ -11,7 +11,7 @@ export const Projects: CollectionConfig = {
     useAsTitle: 'title',
     defaultColumns: ['title', 'status', 'published'],
     group: 'Content',
-    description: 'Projects added here appear on the Work page, after the existing projects.',
+    description: 'Projects added here appear on the Ventures page, after the existing projects.',
   },
   access: { read: publishedOrLoggedIn, create: isLoggedIn, update: isLoggedIn, delete: isLoggedIn },
   defaultSort: 'order',

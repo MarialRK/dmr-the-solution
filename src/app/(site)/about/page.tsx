@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
+import { MediaList } from '@/components/MediaList'
 import { PageIntro } from '@/components/PageIntro'
 import { getAboutPage } from '@/lib/cms'
 import s from '@/components/Inner.module.css'
@@ -8,6 +10,33 @@ export const metadata: Metadata = {
   title: 'About',
   description: 'Daniel Marial Reng Kudum is a South Sudanese entrepreneur and software engineer, and the founder of Nile Green Group.',
 }
+
+const expertise = [
+  {
+    area: 'Software engineering',
+    shown: 'A bachelor’s degree in Computer Software Engineering from African Leadership University, SuddSight, and a year as a Software Engineering Intern at Trinity Technologies.',
+  },
+  {
+    area: 'Technology and digital solutions',
+    shown: 'GreenSphere and NG-Collect, the in-house products being built at Nile Green Packaging, and the public dashboard behind SuddSight.',
+  },
+  {
+    area: 'Entrepreneurship and business management',
+    shown: 'Founding Nile Green Group and Nile Green Packaging, and running the company from importation to its own production. Executive Diploma in Business Management and Administration.',
+  },
+  {
+    area: 'Creative design and communication',
+    shown: 'The logos for DMR, Nile Green Group, Nile Green Packaging and Nile Vertex Properties, the Nile Vertex catalogues and the REPOS masterclass presentation. Professional Diploma in Public Relations.',
+  },
+  {
+    area: 'Environmental innovation',
+    shown: 'Building a company to replace single-use plastic, clean-up campaigns with Save the Nile, and the Carbon and ESG Analysis programme with University of Cambridge Online.',
+  },
+  {
+    area: 'Strategy and pitching',
+    shown: 'Winning ALU Ventures Lab Demo Day with Nile Green Packaging, and Design-Led Strategy with the University of Sydney Business School.',
+  },
+]
 
 export default async function AboutPage() {
   const about = await getAboutPage()
@@ -61,7 +90,22 @@ export default async function AboutPage() {
       <section className={`${s.section} ${s.dark}`}>
         <p className={s.quote}>Lasting change comes less from grand declarations than from disciplined work.</p>
       </section>
-      <section className={`${s.section} ${s.split}`}>
+      <section className={s.section} id="expertise">
+        <h2 className={s.heading}>Expertise</h2>
+        {expertise.map((item) => (
+          <article className={s.entry} key={item.area}>
+            <h3>{item.area}</h3>
+            <div>
+              <p className={s.status}>Shown through</p>
+              <p>{item.shown}</p>
+            </div>
+          </article>
+        ))}
+        <p className={s.path}>
+          Beyond my work, I follow public affairs, governance, economic development, leadership and culture closely.
+        </p>
+      </section>
+      <section className={`${s.section} ${s.alt} ${s.split}`}>
         <h2>Milestones</h2>
         <ol className={s.timeline}>
           <li><span>2023</span><p>Began studying software engineering at African Leadership University as a Mastercard Foundation Scholar.</p></li>
@@ -71,6 +115,14 @@ export default async function AboutPage() {
           <li><span>June 2026</span><p>Completed the Carbon and ESG Analysis programme with University of Cambridge Online.</p></li>
           <li><span>July 2026</span><p>Defended SuddSight, my flood-risk prediction capstone.</p></li>
         </ol>
+      </section>
+      <section className={s.section} id="media">
+        <h2 className={s.heading}>In the media</h2>
+        <MediaList />
+        <p className={s.path}>For interviews, speaking or press enquiries, please get in touch.</p>
+        <Link className={s.button} href="/contact">
+          Contact me
+        </Link>
       </section>
       <section className={`${s.section} ${s.alt} ${s.split}`}>
         <div className={s.prose}>

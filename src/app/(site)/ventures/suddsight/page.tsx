@@ -105,7 +105,7 @@ export default function SuddSightPage() {
           <Placeholder label="Dashboard screenshots to be added" />
         </div>
         <div className={s.links}>
-          <Link href="/work">Back to all work</Link>
+          <Link href="/ventures">Back to ventures and projects</Link>
         </div>
       </section>
     </>

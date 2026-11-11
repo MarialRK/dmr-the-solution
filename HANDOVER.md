@@ -42,7 +42,7 @@ The menu on the left of the dashboard has these sections.
 
 The three articles already on the site are built into the website's files. To change those, ask me (or any developer). Articles you create in the dashboard you can edit freely.
 
-### Projects: the Work page
+### Projects: the Ventures page
 For projects beyond the ones already listed, such as a new venture idea or an app you are building.
 - Fill in the title, write an honest **status** (for example "In development", "Completed 2026" or "Concept"), add a short description, and optionally a link.
 - They appear after the projects already on the page. **Order** controls their position: lower numbers come first.
@@ -53,7 +53,7 @@ For new pieces of work to show clients.
 - Add an image in the same entry.
 - Only include work you have permission to show. Keep confidential proposals, government correspondence and investment documents off the site.
 
-### Media items: the Media page
+### Media items: "In the media" on the About page
 Interviews, talks, events and publications. Choose a type, add the date and a **Link to source**, then tick **Show on website**.
 
 ### Images
@@ -62,7 +62,7 @@ Every image you upload is kept here.
 - A smaller copy is made automatically for the website, so upload the best-quality version you have.
 
 ### Service wording: change what a service page says
-The 10 services already have full text. Use this section only to change part of it.
+The 8 services already have full text. Use this section only to change part of it.
 1. **Create new** and choose the service.
 2. Fill in **only the boxes you want to change**. Anything left empty keeps the current wording.
 3. For "What I offer", put one item per line.
@@ -79,7 +79,7 @@ Replace the headline and opening paragraphs of the About page. Leave a blank lin
 
 ## 4. Things that still need a developer
 These are part of the site's design rather than the dashboard:
-- The home page layout, the ventures (Nile Green Group, Nile Green Packaging, Nile Vertex Properties), and the SuddSight case study.
+- The home page layout, the ventures (Nile Green Group, Nile Green Packaging, Nile Vertex Properties), the Expertise section on About, and the SuddSight case study.
 - The built-in photos, logos and business-card samples.
 - Adding a completely new service, page or menu item.
 

@@ -94,7 +94,7 @@ export default async function PortfolioPage() {
                     the concept cards are invented.
                   </p>
                   <p>
-                    <Link href="/services/business-cards">See the business card service</Link>
+                    <Link href="/services/graphic-design-branding">See all card formats under graphic design and branding</Link>
                   </p>
                 </div>
               </article>
@@ -172,7 +172,7 @@ export default async function PortfolioPage() {
                 <p>A personal awareness video for World Breast Cancer Awareness Month.</p>
                 <dl>
                   <dt>My contribution</dt>
-                  <dd>Recorded the video myself, then edited it with AI tools.</dd>
+                  <dd>Recorded and edited the video myself.</dd>
                 </dl>
                 <p>
                   <a href="https://www.facebook.com/share/v/1RhVwjwmJJ/" rel="noopener noreferrer" target="_blank">

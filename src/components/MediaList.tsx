@@ -1,28 +1,18 @@
-import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
-import { PageIntro } from '@/components/PageIntro'
-import { Placeholder } from '@/components/Placeholder'
 import { formatDate, getAppearances, isSafeLink } from '@/lib/cms'
-import s from '@/components/Inner.module.css'
+import s from './Inner.module.css'
 
-export const metadata: Metadata = {
-  title: 'Media',
-  description: 'Public appearances and recognition for Daniel Marial Reng Kudum.',
-}
-
-export default async function MediaPage() {
+/** Interviews, speaking and recognition, plus anything added under Media items in the dashboard. */
+export async function MediaList() {
   const appearances = await getAppearances()
   return (
     <>
-      <PageIntro title="Media" intro="Public appearances, speaking and recognition." />
-      <section className={`${s.section} ${s.first}`}>
         {appearances.map((item) => {
           const image = typeof item.image === 'object' ? item.image : null
           return (
             <article className={s.entry} key={item.id}>
               <div>
-                <h2>{item.title}</h2>
+                <h3>{item.title}</h3>
                 <p className={s.status}>
                   {item.kind}, {formatDate(item.date)}
                 </p>
@@ -43,7 +33,7 @@ export default async function MediaPage() {
         })}
         <article className={s.entry}>
           <div>
-            <h2>ALU Ventures Lab Demo Day</h2>
+            <h3>ALU Ventures Lab Demo Day</h3>
             <p className={s.status}>Recognition, December 2025</p>
           </div>
           <div>
@@ -53,7 +43,7 @@ export default async function MediaPage() {
         </article>
         <article className={s.entry}>
           <div>
-            <h2>Interviewed by African Leadership University</h2>
+            <h3>Interviewed by African Leadership University</h3>
             <p className={s.status}>Interview, 2026</p>
           </div>
           <div>
@@ -71,7 +61,7 @@ export default async function MediaPage() {
         </article>
         <article className={s.entry}>
           <div>
-            <h2>Pitching Nile Green Packaging</h2>
+            <h3>Pitching Nile Green Packaging</h3>
             <p className={s.status}>Speaking, ALU Ventures Lab Demo Day, December 2025</p>
           </div>
           <div>
@@ -81,7 +71,7 @@ export default async function MediaPage() {
         </article>
         <article className={s.entry}>
           <div>
-            <h2>Speaking to the media at a clean-up campaign</h2>
+            <h3>Speaking to the media at a clean-up campaign</h3>
             <p className={s.status}>Event, with Save the Nile</p>
           </div>
           <div>
@@ -91,22 +81,11 @@ export default async function MediaPage() {
         </article>
         <article className={s.entry}>
           <div>
-            <h2>At African Leadership University</h2>
+            <h3>At African Leadership University</h3>
             <p className={s.status}>Event details to be added</p>
           </div>
           <Image className={s.entryImage} src="/images/alu-group.jpg" alt="Daniel holding a document folder with three others at African Leadership University" width={1280} height={850} sizes="(max-width: 800px) 100vw, 45vw" />
         </article>
-        {appearances.length ? null : (
-          <div className={`${s.placeholders} ${s.placeholdersTwo}`}>
-            <Placeholder label="Speaking engagements to be added" />
-            <Placeholder label="Conferences and events to be added" />
-          </div>
-        )}
-        <p className={s.path}>For interviews, speaking or press enquiries, please get in touch.</p>
-        <Link className={s.button} href="/contact">
-          Contact me
-        </Link>
-      </section>
     </>
   )
 }

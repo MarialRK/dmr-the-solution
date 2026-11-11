@@ -188,7 +188,7 @@ export interface Article {
   createdAt: string;
 }
 /**
- * Projects added here appear on the Work page, after the existing projects.
+ * Projects added here appear on the Ventures page, after the existing projects.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "projects".
@@ -220,15 +220,13 @@ export interface ServiceText {
   id: number;
   service:
     | 'graphic-design-branding'
-    | 'business-cards'
-    | 'social-media-management'
-    | 'ai-video-production'
     | 'website-design-development'
-    | 'software-digital-solutions'
-    | 'business-documentation'
-    | 'professional-writing'
-    | 'consultancy'
-    | 'esg-advisory';
+    | 'business-presentations-documentation'
+    | 'digital-branding-communication'
+    | 'software-technology-solutions'
+    | 'professional-writing-editing'
+    | 'digital-business-consultancy'
+    | 'personal-executive-branding';
   /**
    * For example: Available now
    */
@@ -656,15 +654,13 @@ export interface SiteSetting {
   hiddenServices?:
     | (
         | 'graphic-design-branding'
-        | 'business-cards'
-        | 'social-media-management'
-        | 'ai-video-production'
         | 'website-design-development'
-        | 'software-digital-solutions'
-        | 'business-documentation'
-        | 'professional-writing'
-        | 'consultancy'
-        | 'esg-advisory'
+        | 'business-presentations-documentation'
+        | 'digital-branding-communication'
+        | 'software-technology-solutions'
+        | 'professional-writing-editing'
+        | 'digital-business-consultancy'
+        | 'personal-executive-branding'
       )[]
     | null;
   updatedAt?: string | null;

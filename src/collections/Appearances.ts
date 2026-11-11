@@ -2,7 +2,7 @@ import type { CollectionConfig } from 'payload'
 import { isLoggedIn, publishedOrLoggedIn } from '@/lib/access'
 import { refreshAfterChange, refreshAfterDelete } from '@/lib/revalidate'
 
-const paths = ['/media']
+const paths = ['/about']
 
 export const Appearances: CollectionConfig = {
   slug: 'appearances',

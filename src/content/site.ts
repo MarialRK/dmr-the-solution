@@ -12,11 +12,10 @@ export const site = {
 
 export const navigation = [
   { label: 'About', href: '/about' },
-  { label: 'Work', href: '/work' },
+  { label: 'Ventures', href: '/ventures' },
   { label: 'Services', href: '/services' },
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Insights', href: '/insights' },
-  { label: 'Media', href: '/media' },
   { label: 'Contact', href: '/contact' },
 ]
 
@@ -24,7 +23,7 @@ export const selectedWork: { title: string; status: string; summary: string; hre
   {
     title: 'SuddSight',
     status: 'Deployed research prototype',
-    href: '/work/suddsight',
+    href: '/ventures/suddsight',
     summary:
       'Flood-risk prediction for South Sudan’s Sudd Wetland, using historical satellite data and machine learning that explains its reasoning.',
   },
@@ -42,34 +41,6 @@ export const selectedWork: { title: string; status: string; summary: string; hre
     title: 'Four brand identities',
     status: 'In use',
     summary: 'Logos created for DMR, Nile Green Group, Nile Green Packaging and Nile Vertex Properties.',
-  },
-]
-
-export const serviceGroups = [
-  {
-    name: 'Creative and communication',
-    services: [
-      { name: 'Graphic design and branding', slug: 'graphic-design-branding' },
-      { name: 'Business cards: printed, smart and digital', slug: 'business-cards' },
-      { name: 'Social media management and digital communication', slug: 'social-media-management' },
-      { name: 'AI-powered video production and campaign content', slug: 'ai-video-production' },
-    ],
-  },
-  {
-    name: 'Digital and technology',
-    services: [
-      { name: 'Website design and development', slug: 'website-design-development' },
-      { name: 'Software and digital solutions', slug: 'software-digital-solutions', note: 'By enquiry' },
-    ],
-  },
-  {
-    name: 'Business and advisory',
-    services: [
-      { name: 'Business documentation and development', slug: 'business-documentation' },
-      { name: 'Professional writing and presentations', slug: 'professional-writing' },
-      { name: 'Technology and business consultancy', slug: 'consultancy' },
-      { name: 'ESG and sustainability advisory', slug: 'esg-advisory' },
-    ],
   },
 ]
 

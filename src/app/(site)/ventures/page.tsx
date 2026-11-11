@@ -7,15 +7,15 @@ import { getProjects, isSafeLink } from '@/lib/cms'
 import s from '@/components/Inner.module.css'
 
 export const metadata: Metadata = {
-  title: 'Work',
-  description: 'Companies founded, projects built and creative work by Daniel Marial Reng Kudum, each shown with its current status.',
+  title: 'Ventures',
+  description: 'The companies Daniel Marial Reng Kudum has founded and the products and projects built alongside them, each shown with its current status.',
 }
 
-export default async function WorkPage() {
+export default async function VenturesPage() {
   const projects = await getProjects()
   return (
     <>
-      <PageIntro title="What I have built, and how far each piece has come." />
+      <PageIntro title="What I have built, and how far each piece has come." intro="The companies I have founded, and the products and projects built alongside them. These are separate from the services I offer through DMR." />
       <section className={`${s.section} ${s.first}`}>
         <h2>Companies</h2>
         <Ventures />
@@ -37,7 +37,7 @@ export default async function WorkPage() {
             <dt>Tools</dt>
             <dd>Python, XGBoost, SHAP, FastAPI, React and Leaflet.</dd>
             <dd>
-              <Link href="/work/suddsight">Read the full case study</Link>
+              <Link href="/ventures/suddsight">Read the full case study</Link>
             </dd>
           </dl>
         </article>
@@ -85,16 +85,6 @@ export default async function WorkPage() {
             <p>Nile Green Packaging joins clean-up campaigns in collaboration with Save the Nile.</p>
             <Image className={s.entryImage} src="/images/cleanup-team.jpg" alt="Volunteers in high-visibility vests beside filled refuse sacks during a clean-up campaign" width={1080} height={810} sizes="(max-width: 800px) 100vw, 45vw" />
           </div>
-        </article>
-      </section>
-      <section className={`${s.section} ${s.alt}`}>
-        <h2 className={s.heading}>Experience</h2>
-        <article className={s.entry}>
-          <div>
-            <h3>Trinity Technologies Ltd</h3>
-            <p className={s.status}>Completed, September 2024 to August 2025</p>
-          </div>
-          <p>Software Engineering Intern in Juba, helping design, develop and test web and mobile applications.</p>
         </article>
       </section>
       <section className={`${s.section} ${s.dark}`}>
